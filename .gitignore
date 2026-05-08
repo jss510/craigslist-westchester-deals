@@ -6,9 +6,12 @@ venv/
 .idea/
 .vscode/
 
-# Local-only artifacts (no DB needed in cloud routine)
-data/
+# Local-only artifacts
 logs/
 *.db
 *.db-journal
 *.tmp.json
+
+# data/ is checked in for latest_listings.json only
+data/*
+!data/latest_listings.json
