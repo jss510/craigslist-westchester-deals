@@ -22,7 +22,8 @@ from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_ex
 
 from config import (
     CL_AREA, CL_BASE, DEFAULT_SINCE_HOURS, DELAY_BETWEEN_DETAIL_FETCHES_SEC,
-    MAX_PRICE_BY_KEY, MIN_ASKING_PRICE, REQUEST_TIMEOUT_SEC, SEARCHES, USER_AGENT,
+    MAX_PRICE_BY_KEY, MAX_STUBS_PER_SEARCH, MIN_ASKING_PRICE, REQUEST_TIMEOUT_SEC,
+    SEARCHES, USER_AGENT,
 )
 
 log = logging.getLogger(__name__)
@@ -175,15 +176,23 @@ def _within_window(posted_at_iso: str | None, cutoff: datetime) -> bool:
 
 
 def fetch_one_search(session: requests.Session, search: dict, cutoff: datetime) -> list[dict]:
-    """Fetch + enrich listings for one search query, filtered to last `cutoff` window."""
+    """Fetch + enrich listings for one search query, filtered to last `cutoff` window.
+
+    Pure category searches (no `query`) are sorted newest-first, so we can break
+    early once we see an older listing. Keyword searches use relevance ordering,
+    so we must scan the full stub cap.
+    """
     url = _build_search_url(search)
     log.info("Fetching search %s -> %s", search["key"], url)
     r = _get(session, url)
     stubs = parse_search_page(r.content)
-    log.info("  parsed %d stubs", len(stubs))
+    log.info("  parsed %d stubs (capping at %d)", len(stubs), MAX_STUBS_PER_SEARCH)
+    stubs = stubs[:MAX_STUBS_PER_SEARCH]
+    can_early_break = not search.get("query")  # only safe for category-only searches
 
     cap = MAX_PRICE_BY_KEY.get(search["key"])
     out: list[dict] = []
+    inspected = 0
     for stub in stubs:
         price = stub.get("asking_price")
         if price is not None and price < MIN_ASKING_PRICE:
@@ -194,21 +203,33 @@ def fetch_one_search(session: requests.Session, search: dict, cutoff: datetime) 
             continue
 
         time.sleep(DELAY_BETWEEN_DETAIL_FETCHES_SEC)
+        inspected += 1
         try:
             detail_resp = _get(session, stub["url"])
         except requests.RequestException as e:
             log.warning("  detail fetch failed for %s: %s", stub["post_id"], e)
             continue
         detail = parse_detail_page(detail_resp.content)
+        log.info(
+            "  [%d] %s ($%s) posted=%s",
+            inspected, stub.get("title", "?")[:60],
+            detail.get("asking_price") or stub.get("asking_price"),
+            detail.get("posted_at"),
+        )
 
-        # Re-check price after detail fetch
         d_price = detail.get("asking_price")
         if d_price is not None and d_price < MIN_ASKING_PRICE:
             continue
         if cap and d_price is not None and d_price > cap:
             continue
 
-        if not _within_window(detail.get("posted_at"), cutoff):
+        posted = detail.get("posted_at")
+        if posted and not _within_window(posted, cutoff):
+            if can_early_break:
+                log.info("  hit listing older than cutoff (%s); stopping search early", posted)
+                break
+            # Keyword searches use relevance ordering, so an old listing here
+            # doesn't mean the rest are old too. Just skip this one.
             continue
 
         merged = {
@@ -218,7 +239,7 @@ def fetch_one_search(session: requests.Session, search: dict, cutoff: datetime) 
             "category": search["cat"],
         }
         out.append(merged)
-    log.info("  kept %d listings within %s window", len(out), cutoff.isoformat())
+    log.info("  kept %d listings (inspected %d details)", len(out), inspected)
     return out
 
 

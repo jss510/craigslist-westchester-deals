@@ -57,4 +57,9 @@ MAX_PRICE_BY_KEY = {
 
 # HTTP politeness
 REQUEST_TIMEOUT_SEC = 30
-DELAY_BETWEEN_DETAIL_FETCHES_SEC = 1.5
+DELAY_BETWEEN_DETAIL_FETCHES_SEC = 1.0
+
+# Per-search cap on stubs to inspect (CL sorts newest-first so the freshest listings
+# are always at the top). With since_hours=5 and Westchester volume of ~10-30
+# listings/cat/day, 40 is plenty of margin while keeping each fetch run bounded.
+MAX_STUBS_PER_SEARCH = 40
