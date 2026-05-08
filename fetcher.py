@@ -55,11 +55,14 @@ def _get(session: requests.Session, url: str) -> requests.Response:
 
 
 def _build_search_url(search: dict) -> str:
+    """Build a CL search URL. Always filter to by-owner; legacy codes auto-redirected
+    to ?purveyor=owner but canonical codes (ela/ppa/taa/cba/vga) do not."""
     cat = search["cat"]
-    url = f"{CL_BASE}/search/{CL_AREA}/{cat}"
+    base = f"{CL_BASE}/search/{CL_AREA}/{cat}"
+    params = ["purveyor=owner"]
     if search.get("query"):
-        url += f"?query={requests.utils.quote(search['query'])}"
-    return url
+        params.append(f"query={requests.utils.quote(search['query'])}")
+    return base + "?" + "&".join(params)
 
 
 def _parse_price(text: str | None) -> int | None:
@@ -178,9 +181,9 @@ def _within_window(posted_at_iso: str | None, cutoff: datetime) -> bool:
 def fetch_one_search(session: requests.Session, search: dict, cutoff: datetime) -> list[dict]:
     """Fetch + enrich listings for one search query, filtered to last `cutoff` window.
 
-    Pure category searches (no `query`) are sorted newest-first, so we can break
-    early once we see an older listing. Keyword searches use relevance ordering,
-    so we must scan the full stub cap.
+    The CL search page does NOT reliably sort newest-first — it places multi-area
+    cross-posts (and possibly other promoted listings) at the top regardless of date.
+    So we scan the full stub cap and rely on the per-listing posted_at filter.
     """
     url = _build_search_url(search)
     log.info("Fetching search %s -> %s", search["key"], url)
@@ -188,7 +191,6 @@ def fetch_one_search(session: requests.Session, search: dict, cutoff: datetime) 
     stubs = parse_search_page(r.content)
     log.info("  parsed %d stubs (capping at %d)", len(stubs), MAX_STUBS_PER_SEARCH)
     stubs = stubs[:MAX_STUBS_PER_SEARCH]
-    can_early_break = not search.get("query")  # only safe for category-only searches
 
     cap = MAX_PRICE_BY_KEY.get(search["key"])
     out: list[dict] = []
@@ -225,11 +227,6 @@ def fetch_one_search(session: requests.Session, search: dict, cutoff: datetime) 
 
         posted = detail.get("posted_at")
         if posted and not _within_window(posted, cutoff):
-            if can_early_break:
-                log.info("  hit listing older than cutoff (%s); stopping search early", posted)
-                break
-            # Keyword searches use relevance ordering, so an old listing here
-            # doesn't mean the rest are old too. Just skip this one.
             continue
 
         merged = {

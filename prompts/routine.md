@@ -40,13 +40,23 @@ If the file is missing entirely: report `RUN BLOCKED: data/latest_listings.json 
 
 ## Step 3 — Triage each listing (fast judgment)
 
-For each listing in `listings`, decide if it's worth deep-scoring. **Skip** when:
+For each listing in `listings`, decide if it's worth deep-scoring. **In-scope categories:** electronics, musical instruments, tools, appliances, collectibles, toys & games (incl. Lego), video games & consoles.
 
-- Not in our scope categories: **electronics, musical instruments, portable power tools, Lego, premium kitchen gear** (Rancilio, Breville espresso, Gaggia, Vitamix, KitchenAid, Le Creuset, Wüsthof).
-- Tools that are NOT portable: cabinet saws, full-size jointers, lathes, large bandsaws — won't fit in an SUV.
-- Wholesale/dealer listings ("ALL MUST GO", "we have multiple", "warehouse clearance").
+High-value sub-targets (weight extra carefully — these are where arbitrage hides):
+- **Electronics**: pro audio, GPUs, Apple devices, vintage receivers (Marantz, Pioneer, Sansui, McIntosh), pro cameras (Canon/Nikon/Sony bodies + L-series lenses)
+- **Instruments**: vintage guitars (Fender, Gibson, Martin, Taylor, Rickenbacker), tube amps, vintage synths (DX7, Juno, Jupiter, Moog), pro mics
+- **Tools**: Festool, Mafell, Mirka, Milwaukee M18/Fuel, DeWalt FlexVolt, Makita, SawStop
+- **Appliances**: espresso machines (Rancilio Silvia, Breville Barista, Gaggia, La Marzocco), Vitamix, vintage KitchenAid, Le Creuset, Wüsthof
+- **Collectibles**: graded sports cards, Pokemon (esp. WOTC era), vintage comics (CGC graded a plus), vinyl records (jazz/rock first pressings), vintage advertising
+- **Toys & games**: retired Lego sets (modulars, UCS Star Wars), vintage Star Wars / GI Joe / Transformers, Funko Pop chases, vintage Barbie
+- **Video games**: retro consoles (NES, SNES, Genesis, original Game Boy, Saturn, Dreamcast), CIB games, modded consoles, current-gen at deep discount
+
+**Skip** when:
+- Out of scope (clothing, furniture, vehicles, etc.).
+- Won't fit in a midsize SUV with seats down: cabinet saws, full-size jointers, lathes, large bandsaws, full-size washers/dryers, refrigerators, treadmills, riding mowers, hot tubs, pianos, large furniture.
+- Wholesale/dealer signals ("ALL MUST GO", "we have multiple", "warehouse clearance"). Note: we filter `purveyor=owner` at fetch, so this should be rare.
 - Obvious scams: implausibly low prices, no thumbnail, vague descriptions, "Zelle first / pickup only / cash today".
-- Items priced clearly at or above retail.
+- Items priced clearly at or above retail (no margin possible).
 - Body explicitly says "for parts" or "broken" without strong refurb upside.
 
 When in doubt, **continue to deep-score** rather than skip. False negatives are more costly than false positives in this domain.

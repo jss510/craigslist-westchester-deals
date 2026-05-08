@@ -12,23 +12,20 @@ USER_AGENT = (
     "Chrome/120.0.0.0 Safari/537.36"
 )
 
-# Each entry is one search query. CL category codes:
-#   ele=electronics, msa=musical instruments, tla=tools,
-#   sss=general for-sale, app=appliances, hsh=household, tag=toys+games.
+# Each entry is one search query. We use canonical CL category codes (the modern
+# "all" forms) plus an explicit purveyor=owner filter (added in fetcher._build_search_url).
+#   ela=electronics, msa=musical instruments, tla=tools, ppa=appliances,
+#   cba=collectibles, taa=toys+games, vga=video gaming, sss=general for-sale.
 SEARCHES = [
-    {"key": "electronics", "cat": "ele"},
-    {"key": "instruments", "cat": "msa"},
-    {"key": "tools",       "cat": "tla"},
-    {"key": "lego_sss",    "cat": "sss", "query": "lego"},
-    {"key": "lego_tag",    "cat": "tag", "query": "lego"},
-    {"key": "espresso_app",  "cat": "app", "query": "espresso"},
-    {"key": "rancilio_app",  "cat": "app", "query": "rancilio"},
-    {"key": "breville_app",  "cat": "app", "query": "breville"},
-    {"key": "gaggia_app",    "cat": "app", "query": "gaggia"},
-    {"key": "vitamix_app",   "cat": "app", "query": "vitamix"},
-    {"key": "kitchenaid_app","cat": "app", "query": "kitchenaid"},
-    {"key": "lecreuset_hsh", "cat": "hsh", "query": "le creuset"},
-    {"key": "wusthof_hsh",   "cat": "hsh", "query": "wusthof"},
+    {"key": "electronics",   "cat": "ela"},
+    {"key": "instruments",   "cat": "msa"},
+    {"key": "tools",         "cat": "tla"},
+    {"key": "appliances",    "cat": "ppa"},
+    {"key": "collectibles",  "cat": "cba"},
+    {"key": "toys_games",    "cat": "taa"},
+    {"key": "video_gaming",  "cat": "vga"},
+    # Targeted keyword searches in adjacent categories (relevance-ordered; full scan)
+    {"key": "lego_sss",      "cat": "sss", "query": "lego"},
 ]
 
 # How far back the dedupe window stretches. The routine fires every 4h, so 5h covers
@@ -40,19 +37,14 @@ MIN_ASKING_PRICE = 2  # drop listings priced $1 or below (scam/bait flag)
 
 # Per-search sanity cap on asking price (above this, almost certainly not undervalued)
 MAX_PRICE_BY_KEY = {
-    "electronics":     2000,
-    "instruments":     3000,
-    "tools":           1500,
-    "lego_sss":        1000,
-    "lego_tag":        1000,
-    "espresso_app":     800,
-    "rancilio_app":     800,
-    "breville_app":     800,
-    "gaggia_app":       800,
-    "vitamix_app":      400,
-    "kitchenaid_app":   400,
-    "lecreuset_hsh":    400,
-    "wusthof_hsh":      400,
+    "electronics":   2000,
+    "instruments":   3000,
+    "tools":         1500,
+    "appliances":    1000,
+    "collectibles":  3000,  # cards/comics/vinyl can run high
+    "toys_games":     500,
+    "video_gaming":  1500,  # retro consoles + premium new-gen
+    "lego_sss":      1000,
 }
 
 # HTTP politeness
