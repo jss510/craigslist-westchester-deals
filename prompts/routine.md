@@ -60,13 +60,39 @@ High-value sub-targets (weight extra carefully — these are where arbitrage hid
 - **Toys & games**: retired Lego sets (modulars, UCS Star Wars), vintage Star Wars / GI Joe / Transformers, Funko Pop chases, vintage Barbie
 - **Video games**: retro consoles (NES, SNES, Genesis, original Game Boy, Saturn, Dreamcast), CIB games, modded consoles, current-gen at deep discount
 
+**Triage rules differ by `source` — apply both source-specific lists:**
+
+### For `source: "craigslist"` — single-piece arbitrage (strict transport)
 **Skip** when:
-- Out of scope (clothing, furniture, vehicles, etc.).
-- Won't fit in a midsize SUV with seats down: cabinet saws, full-size jointers, lathes, large bandsaws, full-size washers/dryers, refrigerators, treadmills, riding mowers, hot tubs, pianos, large furniture.
+- Out of scope categories (clothing, vehicles, etc.).
+- Won't fit in a midsize SUV with seats down: cabinet saws, full-size jointers, lathes, large bandsaws, full-size washers/dryers, refrigerators, treadmills, riding mowers, hot tubs, pianos, large furniture (sectionals, dining sets, armoires, full bedroom sets, etc.).
 - Wholesale/dealer signals ("ALL MUST GO", "we have multiple", "warehouse clearance"). Note: we filter `purveyor=owner` at fetch, so this should be rare.
 - Obvious scams: implausibly low prices, no thumbnail, vague descriptions, "Zelle first / pickup only / cash today".
 - Items priced clearly at or above retail (no margin possible).
 - Body explicitly says "for parts" or "broken" without strong refurb upside.
+
+### For `source: "auctionninja"` — RELAXED transport (estate-sale bundle opportunities)
+The user is willing to **rent a box truck** for a multi-piece haul from a single estate, so don't penalize furniture or large items the way we do for CL. Only skip items that genuinely cannot be moved with a rental truck:
+- Pianos requiring professional movers (uprights are sometimes OK; grand pianos no).
+- Hot tubs, in-ground items, built-ins.
+- Vehicles unless they're listed as drivable.
+- Industrial/commercial equipment that needs a forklift or crane.
+
+Furniture, mirrors, art, lighting, rugs, large appliances, dining sets, full bedroom sets — **all in scope**. Estate sales are where high-end designer furniture (Restoration Hardware, Mitchell Gold + Bob Williams, Knoll, Herman Miller, Eames originals, Wesley Hall, Lee Industries, etc.) sells at fractions of retail. Watch especially for:
+- High-end designer furniture and lighting (Visual Comfort, Schoolhouse, Hudson Valley)
+- Hermes / luxury accessories in original packaging (authentication risk — be cautious)
+- Signed art by recognized artists (verify via web search)
+- Premium kitchen + cookware (already in CL scope; doubly relevant here)
+- Pro outdoor gear (premium grills, smokers, premium garden tools)
+- Vintage rugs (Persian / Oriental / antique tribal — high resale on Chairish, 1stDibs)
+
+**Still skip** for AN even with relaxed transport:
+- Generic costume jewelry (authentication risk + thin resale)
+- Generic clothing (low resale per item)
+- Items priced at or above retail
+- Damaged items unless cosmetic-only and cheap to flip
+
+**Multi-lot bundle insight**: If multiple lots from the same `sale_url` clear the score+margin gates, that's a high-priority signal — surface them grouped in the digest so the user can decide if a truck rental for a multi-piece haul makes sense.
 
 When in doubt, **continue to deep-score** rather than skip. False negatives are more costly than false positives in this domain.
 
@@ -88,7 +114,7 @@ Skip web search when training-knowledge confidence is high. Be parsimonious — 
 | Price-to-fair-value ratio | 40% | `(fair_value_low − asking) / fair_value_low`. >50% margin → full marks. |
 | Resale liquidity | 20% | Days-to-sell on the secondary market. <14 days → full marks. |
 | Condition & repair risk | 20% | Working = full. Easy fix (<$50, <2 hrs) = 75%. Major repair = 25%. Parts only = 10%. |
-| SUV transportability | 10% | Fits in a midsize SUV with seats down. Heavy/awkward → penalize. |
+| Transportability | 10% | **CL**: must fit in a midsize SUV with seats down — heavy/awkward → penalize. **AN**: only penalize if not movable with a rental box truck (piano, hot tub, vehicle) — large furniture, dining sets, mirrors, etc. score full marks. |
 | Listing quality signals | 10% | Estate-sale phrasing, "moving", clear photos, plausible description, condition stated. |
 
 Score interpretation:
@@ -126,7 +152,9 @@ Filter your scored list to entries that meet **both** criteria:
 - `score >= 75`, AND
 - `fair_value_low - asking_price >= 200` (absolute dollar margin; using the conservative bound — if even the low estimate doesn't beat asking by $200, the deal isn't worth flagging).
 
-Sort the digest output with auction lots **first** (they're time-sensitive — each has a hard `ends_at` deadline within 36h), then by score descending within each source. If empty, jump to Step 7. Note in the final summary how many listings cleared the score gate but failed the dollar-margin gate.
+Sort the digest with auction lots **first** (time-sensitive). Within auction lots, **group by `sale_url` so all qualifying lots from the same estate cluster together** — this lets the user evaluate "is it worth a rental truck for this estate?" at a glance. Order groups by their highest-scoring lot. Within each group, sort lots by score desc. After all auction-lot groups, append CL listings sorted by score desc. If empty, jump to Step 7. Note in the final summary how many listings cleared the score gate but failed the dollar-margin gate.
+
+**For multi-lot AN bundles**: when a single sale has 3+ qualifying lots, add a one-line header above the group like `📦 Bundle: 5 qualifying lots from "Larchmont Estate Sale" — total margin ~$1,400`. The user can then decide if the cumulative margin justifies a rental truck.
 
 **Auction lots get extra digest treatment:**
 - A red urgency banner showing time-to-close, e.g. "⏰ Closes in 14h 22m"
