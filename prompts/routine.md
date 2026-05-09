@@ -40,9 +40,15 @@ The file has shape:
   "fetched_at": "2026-05-08T19:50:00+00:00",
   "since_hours": 5,
   "count": 42,
+  "by_source": {"craigslist": 39, "auctionninja": 3},
+  "an_watch_list": [
+    {"title": "...", "location": "...", "auctioneer": "...", "sale_url": "...", "status": "coming_soon"}
+  ],
   "listings": [ /* array of listing objects */ ]
 }
 ```
+
+`an_watch_list` (optional) lists nearby AuctionNinja sales that are marked "Coming Soon" — bidding hasn't opened yet and there's no close time to score against. Surface these as a small footer section in the digest so the user can track them; do not score lots from these.
 
 **Freshness check** — compute `now() - fetched_at`:
 - **< 6 hours**: fresh, proceed normally.
@@ -178,6 +184,13 @@ Filter your scored list to entries that meet **both** criteria:
 Sort the digest with auction lots **first** (time-sensitive). Within auction lots, **group by `sale_url` so all qualifying lots from the same estate cluster together** — this lets the user evaluate "is it worth a rental truck for this estate?" at a glance. Order groups by their highest-scoring lot. Within each group, sort lots by score desc. After all auction-lot groups, append CL listings sorted by score desc. If empty, jump to Step 7. Note in the final summary how many listings cleared the score gate but failed the dollar-margin gate.
 
 **For multi-lot AN bundles**: when a single sale has 3+ qualifying lots, add a one-line header above the group like `📦 Bundle: 5 qualifying lots from "Larchmont Estate Sale" — total margin ~$1,400`. The user can then decide if the cumulative margin justifies a rental truck.
+
+**For `an_watch_list`** (optional): if the JSON includes coming-soon sales, append a small footer section to the digest below the main lots:
+```
+📌 Coming Soon — local sales not yet open for bidding (consider tracking)
+- {title} — {location} ({auctioneer})  [link]
+```
+This is sale-level only; no scoring. The user can browse the catalog manually if interested. These will graduate to full scoring once the auctioneer publishes a close time.
 
 **Auction lots get extra digest treatment:**
 - A red urgency banner showing time-to-close, e.g. "⏰ Closes in 14h 22m"

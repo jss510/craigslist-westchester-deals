@@ -68,11 +68,15 @@ def main() -> int:
 
     log.info("Running AuctionNinja fetcher (5mi-of-10803, ≤36h to close)")
     an_listings: list[dict] = []
+    an_watch_list: list[dict] = []
     try:
-        an_listings = auctionninja_fetcher.fetch_all()
+        an_result = auctionninja_fetcher.fetch_all()
+        an_listings = an_result.get("listings", [])
+        an_watch_list = an_result.get("watch_list", [])
     except Exception:
         log.exception("AN fetch failed (continuing with CL only)")
-    log.info("AN: %d listings", len(an_listings))
+    log.info("AN: %d listings, %d watch-list sales (coming soon)",
+             len(an_listings), len(an_watch_list))
 
     listings = cl_listings + an_listings
 
@@ -85,6 +89,7 @@ def main() -> int:
             "craigslist": len(cl_listings),
             "auctionninja": len(an_listings),
         },
+        "an_watch_list": an_watch_list,
         "listings": listings,
     }
     OUTPUT_PATH.write_text(
@@ -113,8 +118,8 @@ def main() -> int:
         log.error("git push failed: %s", push.stderr.strip())
         return 1
 
-    log.info("=== fetch_and_push complete: %d listings pushed (cl=%d, an=%d) ===",
-             len(listings), len(cl_listings), len(an_listings))
+    log.info("=== fetch_and_push complete: %d listings pushed (cl=%d, an=%d, watchlist=%d) ===",
+             len(listings), len(cl_listings), len(an_listings), len(an_watch_list))
     return 0
 
 

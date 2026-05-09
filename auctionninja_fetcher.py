@@ -125,19 +125,24 @@ def fetch_active_sales(session: requests.Session) -> list[dict]:
         location = ""
         if loc_el:
             location = loc_el.get_text(" | ", strip=True).split("|")[0].strip()
-        # `.auction-iteam-detail` holds "Begins to close | Fri, May 08 2026 @ 8:00 PM EDT"
-        # (there can be more than one of these per card; close time is the one with @ + AM/PM)
+        # `.auction-iteam-detail` is reused for two purposes:
+        #   - close time: "Begins to close | Fri, May 08 2026 @ 8:00 PM EDT"
+        #   - or pre-launch placeholder: "Coming Soon"
         close_time_text = ""
+        is_coming_soon = False
         for d in box.select(".auction-iteam-detail"):
             txt = d.get_text(" | ", strip=True)
             if "@" in txt and ("AM" in txt.upper() or "PM" in txt.upper()):
                 close_time_text = txt
                 break
+            if "coming soon" in txt.lower():
+                is_coming_soon = True
         sales.append({
             "title": title_el.get_text(strip=True) if title_el else "",
             "location": location,
             "close_time_text": close_time_text,
             "close_time_utc": _parse_close_time(close_time_text),
+            "is_coming_soon": is_coming_soon,
             "seller": company_el.get_text(strip=True) if company_el else "",
             "url": a["href"].split("?")[0],
         })
@@ -146,23 +151,46 @@ def fetch_active_sales(session: requests.Session) -> list[dict]:
 
 
 def filter_in_scope_sales(sales: list[dict], now: datetime) -> list[dict]:
-    """Apply 5-mile city whitelist + 36-hour close-window filter."""
+    """Apply 5-mile city whitelist + 36-hour close-window filter.
+    Excludes Coming-Soon sales (they have no close time yet)."""
     cutoff = now + timedelta(hours=AN_MAX_HOURS_TO_CLOSE)
     out: list[dict] = []
     for sale in sales:
         if not _matches_local_city(sale.get("location", "")):
             continue
+        if sale.get("is_coming_soon"):
+            continue  # surfaced separately via filter_watch_list
         ct = sale.get("close_time_utc")
         if not ct:
             log.debug("  skip %r: no parseable close time", sale.get("title"))
             continue
         if ct < now:
-            continue  # already closed
+            continue
         if ct > cutoff:
             log.debug("  skip %r: closes in %s (>%dh)", sale.get("title"), ct - now, AN_MAX_HOURS_TO_CLOSE)
             continue
         out.append(sale)
     log.info("  kept %d sales after city + time filters", len(out))
+    return out
+
+
+def filter_watch_list_sales(sales: list[dict]) -> list[dict]:
+    """Coming-soon sales matching the city whitelist. Sale-level metadata only —
+    we don't fetch lots from these (bidding isn't open; scoring isn't meaningful yet)."""
+    out: list[dict] = []
+    for sale in sales:
+        if not sale.get("is_coming_soon"):
+            continue
+        if not _matches_local_city(sale.get("location", "")):
+            continue
+        out.append({
+            "title": sale.get("title"),
+            "location": sale.get("location"),
+            "auctioneer": sale.get("seller"),
+            "sale_url": sale.get("url"),
+            "status": "coming_soon",
+        })
+    log.info("  watch-list sales (coming soon, in 5mi): %d", len(out))
     return out
 
 
@@ -278,8 +306,11 @@ def normalize_lot_to_listing(lot: dict, sale: dict) -> dict:
     }
 
 
-def fetch_all() -> list[dict]:
-    """Top-level: fetch state-filtered sales, narrow to 5mi + 36h, expand to lots."""
+def fetch_all() -> dict:
+    """Top-level: fetch nearby sales and split into:
+      - listings: lots from sales closing within 36h (full per-lot scoring)
+      - watch_list: coming-soon sales within 5mi (sale-level metadata only)
+    """
     session = _session()
     now = datetime.now(timezone.utc)
 
@@ -290,8 +321,9 @@ def fetch_all() -> list[dict]:
         log.error("AN /auctions?zip=%s failed: %s", AN_HOME_ZIP, e)
 
     in_scope = filter_in_scope_sales(all_sales, now)
-    log.info("AN: %d total sales -> %d in-scope after 5mi + 36h filter",
-             len(all_sales), len(in_scope))
+    watch_list = filter_watch_list_sales(all_sales)
+    log.info("AN: %d total sales -> %d in-scope (scoring), %d on watch list (coming soon)",
+             len(all_sales), len(in_scope), len(watch_list))
 
     listings: list[dict] = []
     for sale in in_scope:
@@ -302,7 +334,7 @@ def fetch_all() -> list[dict]:
             continue
         for lot in lots:
             listings.append(normalize_lot_to_listing(lot, sale))
-    return listings
+    return {"listings": listings, "watch_list": watch_list}
 
 
 if __name__ == "__main__":
@@ -332,5 +364,5 @@ if __name__ == "__main__":
             print(f"  [{'X' if in_scope else ' '}] {s.get('location'):30s} {ct} {s.get('title')[:80]}")
         sys.exit(0)
 
-    listings = fetch_all()
-    print(json.dumps(listings, indent=2, default=str))
+    result = fetch_all()
+    print(json.dumps(result, indent=2, default=str))
