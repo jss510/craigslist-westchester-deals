@@ -1,7 +1,11 @@
 {
-  "fetched_at": "2026-05-08T23:58:54+00:00",
+  "fetched_at": "2026-05-09T00:47:03+00:00",
   "since_hours": 5,
   "count": 7,
+  "by_source": {
+    "craigslist": 7,
+    "auctionninja": 0
+  },
   "listings": [
     {
       "post_id": "7933051205",
@@ -13,7 +17,8 @@
       "body": "Perfect condition gaming set. Remote was used once. 4 games included. 2 do Kinect and 2 regular ones. Super low price because looking to sell this evening.  If post is up it's still avaliable.",
       "thumbnail_url": "https://images.craigslist.org/00U0U_1jSPEFvcbMi_0hT0CI_600x450.jpg",
       "search_key": "electronics",
-      "category": "ela"
+      "category": "ela",
+      "source": "craigslist"
     },
     {
       "post_id": "7933045607",
@@ -25,7 +30,8 @@
       "body": "Roland drum machine in excellent condition. Original owner, used only in studio. 9 Volt power supply included. See specs below : 48 preset, 48 user Patterns. Six Songs (maximum 999 Pattern steps). 30 drum voices. 8‑voice polyphony. Stereo output, plus eight individual outputs. Allowing for control and processing of each drum . Start/Stop footswitch jack socket. MIDI In/Out sockets. Tape Sync In/Out sockets. Tape dump In/Out socket. Power from 9V external adaptor or six AA batteries.",
       "thumbnail_url": "https://images.craigslist.org/00Y0Y_9hKCklViaj8_0MM132_600x450.jpg",
       "search_key": "instruments",
-      "category": "msa"
+      "category": "msa",
+      "source": "craigslist"
     },
     {
       "post_id": "7933071043",
@@ -36,7 +42,8 @@
       "posted_at": "2026-05-08T18:17:10-0400",
       "body": "This is a Dewalt miter saw model number DW717 like brand new\\n Best offer considered.",
       "search_key": "tools",
-      "category": "tla"
+      "category": "tla",
+      "source": "craigslist"
     },
     {
       "post_id": "7933046833",
@@ -48,7 +55,8 @@
       "body": "This Danby 7.2 cu. ft. chest freezer is in like-new condition and has been lightly used with minimal contents. Since we no longer need it, we are selling it. Paid, $325, Selling for $175 Model Mo. SKU: DCF072A3WDB-6 Specs 7.2 cu. ft. (204 L) capacity chest freezer Environmentally friendly R600a refrigerant Garage ready: freezer can perform in temperatures from 0°F to 110°F (-17°C to 43°C) Energy efficient foam insulated cabinet & lid Front mount mechanical thermostat is conveniently located for easy temperature control Front mounted drain allows for easy drainage during manual defrost 1 adjustable wire storage basket for smaller, frequently used items Rear rollers and front leveling legs allow for an easy installation Rounded lid design for a modern look Easy clean interior liner",
       "thumbnail_url": "https://images.craigslist.org/00f0f_4lchgSoKprM_0vS0om_600x450.jpg",
       "search_key": "appliances",
-      "category": "ppa"
+      "category": "ppa",
+      "source": "craigslist"
     },
     {
       "post_id": "7933034670",
@@ -60,7 +68,8 @@
       "body": "more photos avail upon request needs a wipe down but in good used condition dimensions: H 69.75 in, W 35.75 in, D 36.25 in",
       "thumbnail_url": "https://images.craigslist.org/01313_1qpWFz5GZNm_0lM0t2_600x450.jpg",
       "search_key": "appliances",
-      "category": "ppa"
+      "category": "ppa",
+      "source": "craigslist"
     },
     {
       "post_id": "7933046592",
@@ -72,7 +81,8 @@
       "body": "Purchase this for a one time use and no longer need it. Still in box will all papers and cables.",
       "thumbnail_url": "https://images.craigslist.org/00z0z_jrKQXELb03V_1320MM_600x450.jpg",
       "search_key": "collectibles",
-      "category": "cba"
+      "category": "cba",
+      "source": "craigslist"
     },
     {
       "post_id": "7933061959",
@@ -84,7 +94,8 @@
       "body": "Durable beginner and intermediate freestyle scooter for boys and girls",
       "thumbnail_url": "https://images.craigslist.org/00a0a_c0nUJJCyxyr_0t20CI_600x450.jpg",
       "search_key": "toys_games",
-      "category": "taa"
+      "category": "taa",
+      "source": "craigslist"
     }
   ]
 }
