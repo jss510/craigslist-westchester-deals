@@ -1,9 +1,9 @@
 {
-  "fetched_at": "2026-05-09T13:10:30+00:00",
+  "fetched_at": "2026-05-09T15:59:07+00:00",
   "since_hours": 5,
-  "count": 6,
+  "count": 7,
   "by_source": {
-    "craigslist": 6,
+    "craigslist": 7,
     "auctionninja": 0
   },
   "listings": [
@@ -21,6 +21,19 @@
       "source": "craigslist"
     },
     {
+      "post_id": "7933179549",
+      "url": "https://newyork.craigslist.org/wch/tls/d/thornwood-hilti-te-s-industrial-hammer/7933179549.html",
+      "title": "Hilti TE 2-S industrial hammer drill.",
+      "asking_price": 50,
+      "location": "westchester",
+      "posted_at": "2026-05-09T10:58:44-0400",
+      "body": "Hilti TE 2-S industrial hammer drill. Good shape Barely used. New ones are $400!",
+      "thumbnail_url": "https://images.craigslist.org/00404_95mLoSRrnDO_0t20CI_600x450.jpg",
+      "search_key": "tools",
+      "category": "tla",
+      "source": "craigslist"
+    },
+    {
       "post_id": "7933151135",
       "url": "https://newyork.craigslist.org/wch/tls/d/yonkers-vintage-goodell-pratt-company/7933151135.html",
       "title": "Vintage Goodell-Pratt Company Breast Drill Manual Hand-Crank Tool For",
@@ -31,6 +44,19 @@
       "thumbnail_url": "https://images.craigslist.org/00L0L_jXzZUI697u7_0t20CI_600x450.jpg",
       "search_key": "tools",
       "category": "tla",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7933167671",
+      "url": "https://newyork.craigslist.org/wch/clt/d/new-rochelle-thomas-kinkade-clearing/7933167671.html",
+      "title": "THOMAS KINKADE \"CLEARING STORMS LITHOGRAPH",
+      "asking_price": 99,
+      "location": "New Rochelle",
+      "posted_at": "2026-05-09T10:00:41-0400",
+      "body": "As l seen in pictures , no paperwork, damag on back shown no damage  make offey",
+      "thumbnail_url": "https://images.craigslist.org/00S0S_cUCrl5ovl91_0zF0CI_600x450.jpg",
+      "search_key": "collectibles",
+      "category": "cba",
       "source": "craigslist"
     },
     {
@@ -68,19 +94,6 @@
       "posted_at": "2026-05-09T08:07:31-0400",
       "body": "5 Vintage Folk Art Hand Carved Wooden Animals Elephants Bird Turtle Pig Trunks Up Pig has some chips",
       "thumbnail_url": "https://images.craigslist.org/00o0o_3egc5xea4A_0t20CI_600x450.jpg",
-      "search_key": "collectibles",
-      "category": "cba",
-      "source": "craigslist"
-    },
-    {
-      "post_id": "7933137537",
-      "url": "https://newyork.craigslist.org/wch/clt/d/port-chester-lenox-bud-vase-vase/7933137537.html",
-      "title": "LENOX, BUD VASE, VASE & PICTURE FRAME",
-      "asking_price": 22,
-      "location": "RYE, NY",
-      "posted_at": "2026-05-09T04:55:39-0400",
-      "body": "THREE PIECES OF LENOX. 1.  SMALL VASE WITH 14k TRIM -  7 INCHES HEIGHT 2.  PICTURE FRAME TRIMMED IN 14 k GOLD 3.  BUD VASE, 11 INCHES HEIGHT NO CHIPS IN ANY.    CAN BE SOLD INDIVIDUALLY  PICK UP IN WHITE PLAINS OR RYE. 1.  $7. 2.  $10. 3.  $5.        THANKS FOR LOOKING.",
-      "thumbnail_url": "https://images.craigslist.org/00101_fbXqeGH0QaAz_0ak07K_600x450.jpg",
       "search_key": "collectibles",
       "category": "cba",
       "source": "craigslist"
