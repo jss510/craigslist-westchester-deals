@@ -55,3 +55,29 @@ DELAY_BETWEEN_DETAIL_FETCHES_SEC = 1.0
 # are always at the top). With since_hours=5 and Westchester volume of ~10-30
 # listings/cat/day, 40 is plenty of margin while keeping each fetch run bounded.
 MAX_STUBS_PER_SEARCH = 40
+
+# AuctionNinja (auction-site) settings
+AN_HOME_ZIP = "10803"  # Pelham, NY
+# Cities/towns within ~5 miles of 10803. Match is case-insensitive substring against
+# the auction's "City, ST" label. If a city name is ambiguous (e.g. "Pelham" exists
+# in many states), we also constrain by state via AN_ALLOWED_STATES below.
+AN_LOCAL_CITIES = [
+    "pelham",         # Pelham, Pelham Manor (10803, 10805)
+    "mount vernon",   # 10550, 10552, 10553
+    "eastchester",    # 10709
+    "bronxville",     # 10708
+    "tuckahoe",       # 10707
+    "new rochelle",   # 10801, 10804, 10805
+    "city island",    # Bronx 10464
+    "throggs neck",   # Bronx 10465
+    "co-op city",     # Bronx 10475
+]
+AN_ALLOWED_STATES = ["NY"]  # state filter applied via ?state= URL param too
+# Most online estate auctions charge a buyer's premium on top of the winning bid.
+# 18-23% is industry typical; we use a conservative 20% so margin estimates aren't optimistic.
+AN_BUYERS_PREMIUM_PCT = 0.20
+# Only score lots whose sale closes within this many hours from now.
+AN_MAX_HOURS_TO_CLOSE = 36
+# Per-lot cap so a single huge sale doesn't blow up the run. 200 is plenty for a
+# focused estate sale within driving distance.
+AN_MAX_LOTS_PER_SALE = 200

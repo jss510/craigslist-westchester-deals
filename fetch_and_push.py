@@ -23,6 +23,7 @@ if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
 if sys.stderr.encoding and sys.stderr.encoding.lower() != "utf-8":
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
+import auctionninja_fetcher
 import fetcher
 from config import DEFAULT_SINCE_HOURS, PROJECT_ROOT
 
@@ -55,19 +56,35 @@ def main() -> int:
     if pull.returncode != 0:
         log.warning("git pull non-zero (%s): %s", pull.returncode, pull.stderr.strip())
 
-    log.info("Running fetcher.fetch_all(since_hours=%d)", DEFAULT_SINCE_HOURS)
+    log.info("Running CL fetcher (since_hours=%d)", DEFAULT_SINCE_HOURS)
+    cl_listings: list[dict] = []
     try:
-        listings = fetcher.fetch_all(since_hours=DEFAULT_SINCE_HOURS)
+        cl_listings = fetcher.fetch_all(since_hours=DEFAULT_SINCE_HOURS)
     except Exception:
-        log.exception("Fetch failed")
-        return 1
-    log.info("Fetched %d listings", len(listings))
+        log.exception("CL fetch failed (continuing with AN)")
+    for item in cl_listings:
+        item.setdefault("source", "craigslist")
+    log.info("CL: %d listings", len(cl_listings))
+
+    log.info("Running AuctionNinja fetcher (5mi-of-10803, ≤36h to close)")
+    an_listings: list[dict] = []
+    try:
+        an_listings = auctionninja_fetcher.fetch_all()
+    except Exception:
+        log.exception("AN fetch failed (continuing with CL only)")
+    log.info("AN: %d listings", len(an_listings))
+
+    listings = cl_listings + an_listings
 
     DATA_DIR.mkdir(exist_ok=True)
     payload = {
         "fetched_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "since_hours": DEFAULT_SINCE_HOURS,
         "count": len(listings),
+        "by_source": {
+            "craigslist": len(cl_listings),
+            "auctionninja": len(an_listings),
+        },
         "listings": listings,
     }
     OUTPUT_PATH.write_text(
@@ -96,7 +113,8 @@ def main() -> int:
         log.error("git push failed: %s", push.stderr.strip())
         return 1
 
-    log.info("=== fetch_and_push complete: %d listings pushed ===", len(listings))
+    log.info("=== fetch_and_push complete: %d listings pushed (cl=%d, an=%d) ===",
+             len(listings), len(cl_listings), len(an_listings))
     return 0
 
 
