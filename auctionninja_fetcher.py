@@ -166,12 +166,9 @@ def filter_in_scope_sales(sales: list[dict], now: datetime) -> list[dict]:
     return out
 
 
-def fetch_lots_for_sale(session: requests.Session, sale: dict) -> list[dict]:
-    """Hit the sale's detail page with view=999 to get all lots in one request."""
-    url = sale["url"] + "?" + urlencode({"view": 999, "sort": "closetime"})
-    log.info("  fetching lots: %s", url)
-    r = _get(session, url)
-    soup = BeautifulSoup(r.content, "lxml")
+def _parse_lots_from_page(html: bytes) -> list[dict]:
+    """Extract lot stubs from one paginated catalog page."""
+    soup = BeautifulSoup(html, "lxml")
     lots: list[dict] = []
     for box in soup.select(".search-catalog-item-box"):
         m = LOT_ID_RE.search(box.get("id", ""))
@@ -186,7 +183,6 @@ def fetch_lots_for_sale(session: requests.Session, sale: dict) -> list[dict]:
         if img_el:
             src = img_el.get("src") or ""
             if src.startswith("http"):
-                # Replace /Thumbs/ with full-size for higher-quality preview
                 thumb_url = src.replace("/Thumbs/", "/")
 
         title = title_a.get_text(strip=True) if title_a else ""
@@ -202,8 +198,55 @@ def fetch_lots_for_sale(session: requests.Session, sale: dict) -> list[dict]:
             "lot_number": lot_num,
             "thumbnail_url": thumb_url,
         })
-    log.info("  parsed %d lots", len(lots))
-    return lots[:AN_MAX_LOTS_PER_SALE]
+    return lots
+
+
+def fetch_lots_for_sale(session: requests.Session, sale: dict) -> list[dict]:
+    """Paginate the sale's catalog. AuctionNinja uses ?view=40 (max) and ?Page=N
+    (capital P). Continue until we get a short page or hit AN_MAX_LOTS_PER_SALE."""
+    import time as _time
+
+    base_url = sale["url"]
+    all_lots: list[dict] = []
+    page = 1
+    PAGE_SIZE = 40  # AN's max per-page
+    seen_ids: set[str] = set()
+
+    while True:
+        url = base_url + "?" + urlencode({"view": PAGE_SIZE, "Page": page})
+        log.info("  fetching lots page %d: %s", page, url)
+        try:
+            r = _get(session, url)
+        except requests.RequestException as e:
+            log.warning("  page %d fetch failed: %s", page, e)
+            break
+
+        page_lots = _parse_lots_from_page(r.content)
+        # De-dupe in case a page returns lots we've already seen (defensive — happens
+        # if the server clamps Page beyond the last real page).
+        new_lots = [l for l in page_lots if l["lot_id"] not in seen_ids]
+        if not new_lots:
+            log.info("  no new lots on page %d — stopping", page)
+            break
+        all_lots.extend(new_lots)
+        seen_ids.update(l["lot_id"] for l in new_lots)
+        log.info("  page %d: %d lots (total so far: %d)", page, len(new_lots), len(all_lots))
+
+        if len(all_lots) >= AN_MAX_LOTS_PER_SALE:
+            log.info("  hit AN_MAX_LOTS_PER_SALE cap (%d)", AN_MAX_LOTS_PER_SALE)
+            break
+        if len(page_lots) < PAGE_SIZE:
+            log.info("  short page (%d < %d) — last page reached", len(page_lots), PAGE_SIZE)
+            break
+
+        page += 1
+        if page > 50:
+            log.warning("  pagination safety break at page 50")
+            break
+        _time.sleep(0.8)  # polite pacing between pages
+
+    log.info("  parsed %d total lots from sale", len(all_lots))
+    return all_lots[:AN_MAX_LOTS_PER_SALE]
 
 
 def normalize_lot_to_listing(lot: dict, sale: dict) -> dict:
