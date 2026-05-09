@@ -10,9 +10,17 @@ You are an arbitrage analyst running every 4 hours. Each fire, you read pre-fetc
 
 **Recipient email:** `jss510@gmail.com`
 
-**Digest inclusion criteria (BOTH must be true):**
+**Digest inclusion criteria (branch by `source`):**
+
+For `source: "craigslist"` (asking price is fixed):
 - `score >= 75`
-- `fair_value_low - asking_price >= 200` (absolute dollar margin floor; uses the conservative end of the fair-value range)
+- `fair_value_low - asking_price >= 200`
+
+For `source: "auctionninja"` (current bid is a snapshot, not the final price):
+- `score >= 75`
+- `max_recommended_bid >= 5` where `max_recommended_bid = floor((fair_value_low - 200) / 1.20)`
+
+The max-bid formula gives the user a hard walk-away ceiling: at any bid ≤ max_recommended_bid, after the 20% buyer's premium, the margin is still ≥ $200 conservative. Above that bid, walk away.
 
 ---
 
@@ -131,6 +139,7 @@ Score interpretation:
   "title": "...",
   "asking_price": 250,
   "search_key": "electronics",
+  "source": "craigslist",
   "location": "New Rochelle NY",
   "thumbnail_url": "...",
   "score": 85,
@@ -146,6 +155,20 @@ Score interpretation:
 }
 ```
 
+**For AuctionNinja items only**, additionally compute `max_recommended_bid` (rounded down to nearest dollar): the highest bid the user can place without breaking the $200 margin floor. Replace `suggested_inquiry_message` with this AN-specific record:
+
+```json
+{
+  ...same fields as above except source: "auctionninja"...,
+  "current_bid": 105,
+  "max_recommended_bid": 167,
+  "max_bid_total_cost": 200,
+  "ends_at": "2026-05-14T23:05:00+00:00"
+}
+```
+
+`max_bid_total_cost` = `max_recommended_bid * 1.20` (final cost after BP if user wins at max). At this point conservative margin = exactly $200. Bid lower → more margin. Bid higher → walk away.
+
 ## Step 5 — Build the digest
 
 Filter your scored list to entries that meet **both** criteria:
@@ -159,7 +182,8 @@ Sort the digest with auction lots **first** (time-sensitive). Within auction lot
 **Auction lots get extra digest treatment:**
 - A red urgency banner showing time-to-close, e.g. "⏰ Closes in 14h 22m"
 - The `auctioneer` and `sale_title` printed prominently so the user knows the venue
-- A note that the price shown includes 20% buyer's premium ("Final cost includes BP")
+- **Max bid prominently displayed**: "🎯 Max bid: $X — walk away above this. Final cost at max bid: $Y (incl. 20% BP)"
+- Current bid alongside max bid so user sees the headroom at a glance
 - Link to the parent `sale_url` so the user can browse other lots in the same sale
 
 For each, build an HTML row (use the same CSS as below). Wrap in:
