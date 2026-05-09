@@ -17,7 +17,7 @@ from bs4 import BeautifulSoup
 from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_exponential
 
 from config import (
-    AN_ALLOWED_STATES, AN_BUYERS_PREMIUM_PCT, AN_LOCAL_CITIES,
+    AN_ALLOWED_STATES, AN_BUYERS_PREMIUM_PCT, AN_HOME_ZIP, AN_LOCAL_CITIES,
     AN_MAX_HOURS_TO_CLOSE, AN_MAX_LOTS_PER_SALE,
     REQUEST_TIMEOUT_SEC, USER_AGENT,
 )
@@ -107,9 +107,9 @@ def _matches_local_city(location: str) -> bool:
     return any(city in loc for city in AN_LOCAL_CITIES)
 
 
-def fetch_active_sales(session: requests.Session, state: str) -> list[dict]:
-    """Pull /auctions?state=<ST> and parse the visible sale cards."""
-    url = f"{AN_BASE}/auctions?state={state}"
+def fetch_active_sales(session: requests.Session) -> list[dict]:
+    """Pull /auctions?zip=<AN_HOME_ZIP> — AN sorts results by distance from this zip."""
+    url = f"{AN_BASE}/auctions?zip={AN_HOME_ZIP}"
     log.info("Fetching AN sales: %s", url)
     r = _get(session, url)
     soup = BeautifulSoup(r.content, "lxml")
@@ -241,11 +241,10 @@ def fetch_all() -> list[dict]:
     now = datetime.now(timezone.utc)
 
     all_sales: list[dict] = []
-    for state in AN_ALLOWED_STATES:
-        try:
-            all_sales.extend(fetch_active_sales(session, state))
-        except requests.RequestException as e:
-            log.error("AN /auctions?state=%s failed: %s", state, e)
+    try:
+        all_sales = fetch_active_sales(session)
+    except requests.RequestException as e:
+        log.error("AN /auctions?zip=%s failed: %s", AN_HOME_ZIP, e)
 
     in_scope = filter_in_scope_sales(all_sales, now)
     log.info("AN: %d total sales -> %d in-scope after 5mi + 36h filter",
@@ -283,12 +282,11 @@ if __name__ == "__main__":
 
     if args.probe_sales:
         session = _session()
-        for state in AN_ALLOWED_STATES:
-            sales = fetch_active_sales(session, state)
-            for s in sales:
-                ct = s.get("close_time_utc")
-                in_scope = _matches_local_city(s.get("location", ""))
-                print(f"  [{'X' if in_scope else ' '}] {s.get('location'):30s} {ct} {s.get('title')[:80]}")
+        sales = fetch_active_sales(session)
+        for s in sales:
+            ct = s.get("close_time_utc")
+            in_scope = _matches_local_city(s.get("location", ""))
+            print(f"  [{'X' if in_scope else ' '}] {s.get('location'):30s} {ct} {s.get('title')[:80]}")
         sys.exit(0)
 
     listings = fetch_all()

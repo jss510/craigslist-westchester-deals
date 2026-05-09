@@ -68,11 +68,17 @@ AN_LOCAL_CITIES = [
     "bronxville",     # 10708
     "tuckahoe",       # 10707
     "new rochelle",   # 10801, 10804, 10805
+    "larchmont",      # 10538 — ~3 mi
+    "mamaroneck",     # 10543 — ~4 mi
+    "scarsdale",      # 10583 — ~5 mi (borderline; included)
     "city island",    # Bronx 10464
     "throggs neck",   # Bronx 10465
     "co-op city",     # Bronx 10475
 ]
-AN_ALLOWED_STATES = ["NY"]  # state filter applied via ?state= URL param too
+# We fetch /auctions?zip=AN_HOME_ZIP which auto-sorts by distance, so the state
+# constraint is only a safety net for cross-state edge cases (e.g. Greenwich CT
+# pretty close but >5 mi).
+AN_ALLOWED_STATES = ["NY"]
 # Most online estate auctions charge a buyer's premium on top of the winning bid.
 # 18-23% is industry typical; we use a conservative 20% so margin estimates aren't optimistic.
 AN_BUYERS_PREMIUM_PCT = 0.20
