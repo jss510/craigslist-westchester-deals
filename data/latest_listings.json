@@ -1,9 +1,9 @@
 {
-  "fetched_at": "2026-05-10T19:59:21+00:00",
+  "fetched_at": "2026-05-10T23:58:12+00:00",
   "since_hours": 5,
-  "count": 2,
+  "count": 0,
   "by_source": {
-    "craigslist": 2,
+    "craigslist": 0,
     "auctionninja": 0
   },
   "an_watch_list": [
@@ -22,32 +22,5 @@
       "status": "coming_soon"
     }
   ],
-  "listings": [
-    {
-      "post_id": "7933415448",
-      "url": "https://newyork.craigslist.org/wch/msg/d/yonkers-the-conrad-model-is-vintage/7933415448.html",
-      "title": "The Conrad model 40213 is a vintage dreadnought acoustic guitar manufa",
-      "asking_price": 125,
-      "location": "Yonkers ,NY",
-      "posted_at": "2026-05-10T14:01:48-0400",
-      "body": "The Conrad model 40213 is a vintage dreadnought acoustic guitar manufactured in Japan around 1970.  The original case is in poor condition  The bridge has a crack in it. Sold as is.  125.00",
-      "thumbnail_url": "https://images.craigslist.org/00S0S_hSCRXBvN3KC_0630ak_600x450.jpg",
-      "search_key": "instruments",
-      "category": "msa",
-      "source": "craigslist"
-    },
-    {
-      "post_id": "7933398806",
-      "url": "https://newyork.craigslist.org/wch/msg/d/scarsdale-fender-acoustosonic/7933398806.html",
-      "title": "Fender Acoustosonic telecaster loaded body yellow",
-      "asking_price": 550,
-      "location": "Scarsdale",
-      "posted_at": "2026-05-10T12:38:33-0400",
-      "body": "Fender Acoustosonic telecaster loaded body Yellow Made in Mexico This tele body is fully loaded and has never been used. You can check out the rest of my guitar related listings by clicking on \"More ads by this user\" under the map on the right side of the page.",
-      "thumbnail_url": "https://images.craigslist.org/00g0g_c6bXKXvRf4s_0bF0fu_600x450.jpg",
-      "search_key": "instruments",
-      "category": "msa",
-      "source": "craigslist"
-    }
-  ]
+  "listings": []
 }
