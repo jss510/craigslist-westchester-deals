@@ -1,9 +1,9 @@
 {
-  "fetched_at": "2026-05-10T11:59:11+00:00",
+  "fetched_at": "2026-05-10T15:59:28+00:00",
   "since_hours": 5,
-  "count": 0,
+  "count": 5,
   "by_source": {
-    "craigslist": 0,
+    "craigslist": 5,
     "auctionninja": 0
   },
   "an_watch_list": [
@@ -22,5 +22,71 @@
       "status": "coming_soon"
     }
   ],
-  "listings": []
+  "listings": [
+    {
+      "post_id": "7933382891",
+      "url": "https://newyork.craigslist.org/wch/ele/d/white-plains-avata-360-3way-charging-hub/7933382891.html",
+      "title": "Avata 360 3way charging hub",
+      "asking_price": 50,
+      "location": "White Plains",
+      "posted_at": "2026-05-10T11:14:22-0400",
+      "body": "This is a brand new, never used authentic DJI, three-way, parallel, charging hub for the brand new Avata 360. I also have brand new batteries with zero charging cycles on them that I can include for an additional $100 each. This device would cost you $60 on Amazon, so please no lowball offers. I have priced this to sell not negotiate. All of my devices are brand new unless otherwise specified.",
+      "thumbnail_url": "https://images.craigslist.org/00d0d_hRAmA4myBUr_0t20CI_600x450.jpg",
+      "search_key": "electronics",
+      "category": "ela",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7933382052",
+      "url": "https://newyork.craigslist.org/wch/ele/d/white-plains-dji-neo-charging-hub-with/7933382052.html",
+      "title": "DJI Neo 2 charging hub with 3 like new batteries",
+      "asking_price": 160,
+      "location": "White Plains",
+      "posted_at": "2026-05-10T11:10:15-0400",
+      "body": "This is a like new 3way charging hub with three like new batteries that have less than 10 charging cycles on them each. I have set the price low because I wanted to sell. Absolutely no lowball offers.",
+      "thumbnail_url": "https://images.craigslist.org/00K0K_byAqHENXTU4_0t20CI_600x450.jpg",
+      "search_key": "electronics",
+      "category": "ela",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7933367900",
+      "url": "https://newyork.craigslist.org/wch/msg/d/tarrytown-fender-rumble-500-v3-2x10/7933367900.html",
+      "title": "Fender Rumble 500 V3 2x10 500W Bass Combo Amp - Ivory",
+      "asking_price": 600,
+      "location": "Tarrytown",
+      "posted_at": "2026-05-10T09:44:02-0400",
+      "body": "Love this amp. Unfortunately it’s too loud for me. Looks and performs as new 500W output delivers massive bass tone for live performances and studio sessions Exclusive ivory vinyl offers a bold retro-modern aesthetic Custom Eminence 10\" speakers provide tight bass, articulate mids and sparkling highs Footswitchable overdrive adds punchy grit while maintaining low-end clarity Three-button voicing section offers versatile tone shaping options Lightweight 36.5-lb. design ensures portability for gigs and rehearsals Durable plywood cabinet with reinforced corners provide roadworthy reliability XLR line out enables direct connection to PA systems for seamless integration Headphone output allows private practice without disturbing others FX loop lets you integrate effects pedals for personalized sound customization Specs General Type: Solid-state combo amplifier General Type: Solid-state combo amplifier Power: 500W (with external speaker), 350W (internal only) Speakers: 2 x 10\" Eminence Controls Channels: 1 EQ: 4-band EQ Three-button voicing: Contour, Vintage, Bright Overdrive: Yes Connectivity Inputs: 1 x 1/4\", 1 x 1/8\" AUX Outputs: 1 x 1/4\" (external 8 ohm speaker), 1 x XLR (line out) Headphones: 1 x 1/4\" FX loop: Yes Footswitch I/O: Yes, footswitch not included Power Power source: Standard IEC AC cable Construction Dimensions: 19\" x 14\" x 23\" Weight: 36.5 lb.",
+      "thumbnail_url": "https://images.craigslist.org/00S0S_9ln80W0qMDJ_0t20CI_600x450.jpg",
+      "search_key": "instruments",
+      "category": "msa",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7933373983",
+      "url": "https://newyork.craigslist.org/wch/tls/d/croton-on-hudson-welder-miller-140/7933373983.html",
+      "title": "Welder Miller 140 Miller-Matic",
+      "asking_price": 800,
+      "location": "Croton on Hudson",
+      "posted_at": "2026-05-10T10:23:25-0400",
+      "body": "Miller 140 Miller-Matic with cart, NOS gas, gauges, helmet, gloves all welding apparatus shown in photo.",
+      "thumbnail_url": "https://images.craigslist.org/00J0J_7lcSe2w7GoJ_0zE0t2_600x450.jpg",
+      "search_key": "tools",
+      "category": "tla",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7933362659",
+      "url": "https://newyork.craigslist.org/wch/clt/d/yonkers-nos-vintage-star-wars-1982/7933362659.html",
+      "title": "NOS Vintage Star Wars 1982 Movie Poster One Sheet Style D George Lucas",
+      "asking_price": 85,
+      "location": "westchester",
+      "posted_at": "2026-05-10T09:04:14-0400",
+      "body": "New Old Stock Vintage Star Wars 1982 Movie Poster One Sheet Style D George Lucas Rolled 33”h x 22”w Original Owner. In original packaging, only opened to take photo. Artwork by Drew Struzan often referred to as the “Circus Poster” or “Collage” version weights are not included",
+      "thumbnail_url": "https://images.craigslist.org/00404_5tpwEELObRZ_0t20CI_600x450.jpg",
+      "search_key": "collectibles",
+      "category": "cba",
+      "source": "craigslist"
+    }
+  ]
 }
