@@ -1,9 +1,9 @@
 {
-  "fetched_at": "2026-05-09T23:59:25+00:00",
+  "fetched_at": "2026-05-10T11:59:11+00:00",
   "since_hours": 5,
-  "count": 10,
+  "count": 0,
   "by_source": {
-    "craigslist": 10,
+    "craigslist": 0,
     "auctionninja": 0
   },
   "an_watch_list": [
@@ -22,135 +22,5 @@
       "status": "coming_soon"
     }
   ],
-  "listings": [
-    {
-      "post_id": "7933279402",
-      "url": "https://newyork.craigslist.org/wch/ele/d/armonk-set-of-bose-adjustable-speaker/7933279402.html",
-      "title": "Set of 4 Bose Adjustable Speaker Stands for Cubes & Others",
-      "asking_price": 100,
-      "location": "Armonk",
-      "posted_at": "2026-05-09T17:44:53-0400",
-      "body": "Set of 4 Bose Adjustable Speaker Stands for Cubes & Others",
-      "search_key": "electronics",
-      "category": "ela",
-      "source": "craigslist"
-    },
-    {
-      "post_id": "7933293917",
-      "url": "https://newyork.craigslist.org/wch/msg/d/bedford-hills-small-guitar-cases/7933293917.html",
-      "title": "2 small guitar cases",
-      "asking_price": 10,
-      "location": "Bedford Hills (N.Westchester)",
-      "posted_at": "2026-05-09T19:10:15-0400",
-      "body": "Both small guitar cases $10 Click \"more ads by this user\" button (upper right) for more items for sale. Cash only.  For a quicker response, please text me the day and time at show contact info to coordinate pickup in Bedford Hills (Norther Westchester, not NYC).",
-      "thumbnail_url": "https://images.craigslist.org/00G0G_85NQelQ0bHQ_0t20CI_600x450.jpg",
-      "search_key": "instruments",
-      "category": "msa",
-      "source": "craigslist"
-    },
-    {
-      "post_id": "7933244331",
-      "url": "https://newyork.craigslist.org/wch/tls/d/scarsdale-fiskas-extending-tree-pruner/7933244331.html",
-      "title": "FISKAS Extending Tree Pruner",
-      "asking_price": 45,
-      "location": "Scarsdale",
-      "posted_at": "2026-05-09T15:02:08-0400",
-      "body": "FISKAS Extending Tree Pruner If you can read this – it is still available.",
-      "thumbnail_url": "https://images.craigslist.org/00B0B_S2byKcjziu_06J0t2_600x450.jpg",
-      "search_key": "tools",
-      "category": "tla",
-      "source": "craigslist"
-    },
-    {
-      "post_id": "7933243717",
-      "url": "https://newyork.craigslist.org/wch/tls/d/scarsdale-new-chicago-electric-8-wired/7933243717.html",
-      "title": "New CHICAGO ELECTRIC 3/8” Wired Close Quarter Drill",
-      "asking_price": 30,
-      "location": "Scarsdale",
-      "posted_at": "2026-05-09T14:59:37-0400",
-      "body": "New CHICAGO ELECTRIC 3/8” Wired Close Quarter Drill Lightweight drill designed for close quarter work Item 60610 If you can read this – it is still available.",
-      "thumbnail_url": "https://images.craigslist.org/00909_44DDXGqIJjv_0CI0t2_600x450.jpg",
-      "search_key": "tools",
-      "category": "tla",
-      "source": "craigslist"
-    },
-    {
-      "post_id": "7933243325",
-      "url": "https://newyork.craigslist.org/wch/tls/d/scarsdale-x-new-pittsburgh-wooden/7933243325.html",
-      "title": "2 x New PITTSBURGH 8” Wooden Handscrew Clamps",
-      "asking_price": 25,
-      "location": "Scarsdale",
-      "posted_at": "2026-05-09T14:57:46-0400",
-      "body": "2 x New PITTSBURGH 8” Wooden Handscrew Clamps If you can red this – it is still available",
-      "thumbnail_url": "https://images.craigslist.org/00Q0Q_1qMHdBPhxAU_0wu0t2_600x450.jpg",
-      "search_key": "tools",
-      "category": "tla",
-      "source": "craigslist"
-    },
-    {
-      "post_id": "7933243202",
-      "url": "https://newyork.craigslist.org/wch/tls/d/scarsdale-arrow-et100m-electric-brad/7933243202.html",
-      "title": "ARROW ET100M Electric Brad Nail Gun",
-      "asking_price": 25,
-      "location": "Scarsdale",
-      "posted_at": "2026-05-09T14:57:14-0400",
-      "body": "ARROW ET100M Electric Brad Nail Gun Uses 18 Gauge Brads - 5/8” 3/4” or 1” If you can read this – it is still available",
-      "thumbnail_url": "https://images.craigslist.org/00505_cw8qjUxrSJg_0CI0jZ_600x450.jpg",
-      "search_key": "tools",
-      "category": "tla",
-      "source": "craigslist"
-    },
-    {
-      "post_id": "7933254682",
-      "url": "https://newyork.craigslist.org/wch/app/d/yonkers-kitchen-silverware-and-drying/7933254682.html",
-      "title": "Kitchen silverware and Drying rack",
-      "asking_price": 50,
-      "location": "westchester",
-      "posted_at": "2026-05-09T15:49:18-0400",
-      "body": "Drying rack Spoons Forks Small pot",
-      "thumbnail_url": "https://images.craigslist.org/00Y0Y_3kA3CxiKj48_0CI0t2_600x450.jpg",
-      "search_key": "appliances",
-      "category": "ppa",
-      "source": "craigslist"
-    },
-    {
-      "post_id": "7933297969",
-      "url": "https://newyork.craigslist.org/wch/clt/d/lincolndale-vintage-pedal-car-firetrucks/7933297969.html",
-      "title": "2 vintage Pedal Car Firetrucks",
-      "asking_price": 75,
-      "location": "westchester",
-      "posted_at": "2026-05-09T19:34:55-0400",
-      "body": "2 pedal cars for parts or restoral  Both work / can be ridden as is. the Mickey Mouse one is rough, but still restorable - I have the metal (chrome ) bumpers etc. the other one is solid - really just surface rust. $75 each or $125 for both.   CASH ONLY if not sold by June 1  I ill take them apart and Ebay the parts",
-      "thumbnail_url": "https://images.craigslist.org/00909_dw0CoDKlVw5_0CI0dw_600x450.jpg",
-      "search_key": "collectibles",
-      "category": "cba",
-      "source": "craigslist"
-    },
-    {
-      "post_id": "7933257973",
-      "url": "https://newyork.craigslist.org/wch/clt/d/port-chester-king-mackerel/7933257973.html",
-      "title": "King mackerel",
-      "asking_price": 800,
-      "location": "Port chester ny",
-      "posted_at": "2026-05-09T16:04:26-0400",
-      "body": "Amazing colors  32 inches long with wall hook",
-      "thumbnail_url": "https://images.craigslist.org/00o0o_6kSCqie4Xyz_0t20CI_600x450.jpg",
-      "search_key": "collectibles",
-      "category": "cba",
-      "source": "craigslist"
-    },
-    {
-      "post_id": "7933298705",
-      "url": "https://newyork.craigslist.org/wch/tag/d/lincolndale-vintage-pedal-car-firetrucks/7933298705.html",
-      "title": "2 vintage Pedal Car Firetrucks",
-      "asking_price": 75,
-      "location": "westchester",
-      "posted_at": "2026-05-09T19:40:11-0400",
-      "body": "2 pedal cars for parts or restoral  Both work / can be ridden as is. the Mickey Mouse one is rough, but still restorable - I have the metal (chrome ) bumpers etc. the other one is solid - really just surface rust. $75 each or $125 for both.   CASH  ONLY if not sold by June 1  I ill take them apart and Ebay the parts",
-      "thumbnail_url": "https://images.craigslist.org/00909_dw0CoDKlVw5_0CI0dw_600x450.jpg",
-      "search_key": "toys_games",
-      "category": "taa",
-      "source": "craigslist"
-    }
-  ]
+  "listings": []
 }
