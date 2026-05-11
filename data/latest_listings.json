@@ -1,9 +1,9 @@
 {
-  "fetched_at": "2026-05-10T23:58:12+00:00",
+  "fetched_at": "2026-05-11T11:58:29+00:00",
   "since_hours": 5,
-  "count": 0,
+  "count": 1,
   "by_source": {
-    "craigslist": 0,
+    "craigslist": 1,
     "auctionninja": 0
   },
   "an_watch_list": [
@@ -22,5 +22,19 @@
       "status": "coming_soon"
     }
   ],
-  "listings": []
+  "listings": [
+    {
+      "post_id": "7933514055",
+      "url": "https://newyork.craigslist.org/wch/ele/d/white-plains-dji-avata-battery/7933514055.html",
+      "title": "DJI AVATA 360 + 1 battery",
+      "asking_price": 600,
+      "location": "White Plains",
+      "posted_at": "2026-05-11T03:57:11-0400",
+      "body": "This is the brand new DJI Avata 360 released in late April 2026. If you already have the RC two or the goggles 3/and three and the motion controller then this is all you need to take to the skies full 360°. ABSOLUTELY NO LOWBALL OFFERS. I HAVE PRICED THESE TO SELL NOT NEGOTIATE. For a 3% fee, I can accept Credit/debit cards through my LLC. However, I must also collect sales tax if we go this route. All of my devices are brand new in the original packaging for the manufacturer.",
+      "thumbnail_url": "https://images.craigslist.org/01212_i8IRsst4fJi_0CI0t2_600x450.jpg",
+      "search_key": "electronics",
+      "category": "ela",
+      "source": "craigslist"
+    }
+  ]
 }
