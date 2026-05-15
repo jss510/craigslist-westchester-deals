@@ -1,11 +1,64 @@
 {
-  "fetched_at": "2026-05-15T11:59:31+00:00",
+  "fetched_at": "2026-05-15T18:18:50+00:00",
   "since_hours": 5,
-  "count": 0,
+  "count": 4,
   "by_source": {
-    "craigslist": 0,
+    "craigslist": 4,
     "auctionninja": 0
   },
   "an_watch_list": [],
-  "listings": []
+  "listings": [
+    {
+      "post_id": "7934531282",
+      "url": "https://newyork.craigslist.org/wch/clt/d/yonkers-vintage-budweiser-lighted/7934531282.html",
+      "title": "“Vintage Budweiser Lighted Advertising Wall Clock”",
+      "asking_price": 125,
+      "location": "westchester",
+      "posted_at": "2026-05-15T14:02:22-0400",
+      "body": "Vintage Budweiser Lighted Advertising Wall Clock Vintage Budweiser advertising wall clock in nice condition. Clock works properly and the light functions as it should. Great piece for a garage, home bar, man cave, game room, or beer advertising collection. Classic Budweiser branding with a great illuminated look when lit up. Clean overall condition with normal age-related wear. $125 or best offer Yonkers, NY",
+      "thumbnail_url": "https://images.craigslist.org/00d0d_cuW7FNAN07q_0t20t2_600x450.jpg",
+      "search_key": "collectibles",
+      "category": "cba",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7934519470",
+      "url": "https://newyork.craigslist.org/wch/clt/d/yonkers-vintage-uranium-glass-section/7934519470.html",
+      "title": "Vintage Uranium Glass 4 Section Candy Relish Dish Silver Etched Metal",
+      "asking_price": 45,
+      "location": "westchester",
+      "posted_at": "2026-05-15T13:22:49-0400",
+      "body": "Vintage Uranium Glass 4 Section Candy Relish Dish with Silver Etched Metal Holder and Handle Excellent Condition 9” wide by 6.5” high",
+      "thumbnail_url": "https://images.craigslist.org/00707_4yRydi7Y4aS_0t20CI_600x450.jpg",
+      "search_key": "collectibles",
+      "category": "cba",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7934515088",
+      "url": "https://newyork.craigslist.org/wch/clt/d/yonkers-vintage-heavy-bronze-wolf-head/7934515088.html",
+      "title": "Vintage Heavy Bronze?  Wolf Head  3” long by 3” wide",
+      "asking_price": 45,
+      "location": "westchester",
+      "posted_at": "2026-05-15T13:09:56-0400",
+      "body": "Vintage Heavy Bronze?  Wolf Head  3” long by 3” wide",
+      "thumbnail_url": "https://images.craigslist.org/01717_eChtUYVKBil_0t20CI_600x450.jpg",
+      "search_key": "collectibles",
+      "category": "cba",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7934475177",
+      "url": "https://newyork.craigslist.org/wch/clt/d/shrub-oak-baseball-car-lot-card-book/7934475177.html",
+      "title": "1980 1981 1982 1994 1993 baseball car lot card BOOK Stars hall of fame",
+      "asking_price": 99,
+      "location": "Mohegan lake",
+      "posted_at": "2026-05-15T10:49:52-0400",
+      "body": "I just reposted this. Please keep in mind the auction is just for the cards in the binder. There are a few sleeves with older cards in background of the picture,   will list those separately..... Nice collection of baseball Stars, All cards are excellent to mint condition. The cards come in a baseball card binder holder 1980 1981 1982 1994 1993 baseball cards lot card stars hall of fame book. bobby bonilla, steve avery, paul molitor, ron guidry, keith hernandez, johnny bench, ozzie smith, george brett pete rose and more",
+      "thumbnail_url": "https://images.craigslist.org/00A0A_2ARnRG8GvO8_0ae0dW_600x450.jpg",
+      "search_key": "collectibles",
+      "category": "cba",
+      "source": "craigslist"
+    }
+  ]
 }
