@@ -1,13 +1,39 @@
 {
-  "fetched_at": "2026-05-15T18:18:50+00:00",
+  "fetched_at": "2026-05-15T19:58:56+00:00",
   "since_hours": 5,
-  "count": 4,
+  "count": 6,
   "by_source": {
-    "craigslist": 4,
+    "craigslist": 6,
     "auctionninja": 0
   },
   "an_watch_list": [],
   "listings": [
+    {
+      "post_id": "7934536933",
+      "url": "https://newyork.craigslist.org/wch/ele/d/yonkers-portable-washer-dryer/7934536933.html",
+      "title": "Portable Washer & Dryer",
+      "asking_price": 100,
+      "location": "Yonkers",
+      "posted_at": "2026-05-15T14:22:32-0400",
+      "body": "Portable Washer & Dryer Good condition",
+      "thumbnail_url": "https://images.craigslist.org/00X0X_75WKVI2ZGXs_0t20CI_600x450.jpg",
+      "search_key": "electronics",
+      "category": "ela",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7934559213",
+      "url": "https://newyork.craigslist.org/wch/tls/d/cortlandt-manor-power-steamer/7934559213.html",
+      "title": "Power Steamer",
+      "asking_price": 50,
+      "location": "Cortlandt Manor",
+      "posted_at": "2026-05-15T15:44:43-0400",
+      "body": "Wagner 705 Power Steamer for removal of wallpaper",
+      "thumbnail_url": "https://images.craigslist.org/00F0F_dke6TuRfsPi_0hq0d4_600x450.jpg",
+      "search_key": "tools",
+      "category": "tla",
+      "source": "craigslist"
+    },
     {
       "post_id": "7934531282",
       "url": "https://newyork.craigslist.org/wch/clt/d/yonkers-vintage-budweiser-lighted/7934531282.html",
@@ -48,16 +74,16 @@
       "source": "craigslist"
     },
     {
-      "post_id": "7934475177",
-      "url": "https://newyork.craigslist.org/wch/clt/d/shrub-oak-baseball-car-lot-card-book/7934475177.html",
-      "title": "1980 1981 1982 1994 1993 baseball car lot card BOOK Stars hall of fame",
-      "asking_price": 99,
-      "location": "Mohegan lake",
-      "posted_at": "2026-05-15T10:49:52-0400",
-      "body": "I just reposted this. Please keep in mind the auction is just for the cards in the binder. There are a few sleeves with older cards in background of the picture,   will list those separately..... Nice collection of baseball Stars, All cards are excellent to mint condition. The cards come in a baseball card binder holder 1980 1981 1982 1994 1993 baseball cards lot card stars hall of fame book. bobby bonilla, steve avery, paul molitor, ron guidry, keith hernandez, johnny bench, ozzie smith, george brett pete rose and more",
-      "thumbnail_url": "https://images.craigslist.org/00A0A_2ARnRG8GvO8_0ae0dW_600x450.jpg",
-      "search_key": "collectibles",
-      "category": "cba",
+      "post_id": "7934559611",
+      "url": "https://newyork.craigslist.org/wch/tag/d/cortlandt-manor-fog-machine/7934559611.html",
+      "title": "Fog Machine",
+      "asking_price": 50,
+      "location": "Cortlandt Manor",
+      "posted_at": "2026-05-15T15:46:32-0400",
+      "body": "Chauvet Hurricane 1101 Fog Machine",
+      "thumbnail_url": "https://images.craigslist.org/01313_bxtjrg5Tc8U_0hq0d4_600x450.jpg",
+      "search_key": "toys_games",
+      "category": "taa",
       "source": "craigslist"
     }
   ]
