@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-16T14:30:11+00:00",
+  "fetched_at": "2026-05-16T15:59:10+00:00",
   "since_hours": 5,
   "count": 4,
   "by_source": {
@@ -8,6 +8,18 @@
   },
   "an_watch_list": [],
   "listings": [
+    {
+      "post_id": "7934699737",
+      "url": "https://newyork.craigslist.org/wch/msg/d/yonkers-paititi-violin-with-case/7934699737.html",
+      "title": "Paititi Violin with case",
+      "asking_price": 100,
+      "location": "Yonkers",
+      "posted_at": "2026-05-16T10:34:10-0400",
+      "body": "Up for sale is a nice violin barely used in great condition. The ad will be removed once sold, please don’t if it’s still available.",
+      "search_key": "instruments",
+      "category": "msa",
+      "source": "craigslist"
+    },
     {
       "post_id": "7934691844",
       "url": "https://newyork.craigslist.org/wch/msg/d/pleasantville-drum-set/7934691844.html",
@@ -44,18 +56,6 @@
       "body": "Works great! IYKYK - very loud, very portable, can power a 4x12 no problem. For some reason this one says \"reverb\" on it - it is more like the ambience knob on others. It is not the new version with an actual reverb circuit.",
       "search_key": "instruments",
       "category": "msa",
-      "source": "craigslist"
-    },
-    {
-      "post_id": "7934665196",
-      "url": "https://newyork.craigslist.org/wch/app/d/mohegan-lake-washer-and-dryer-for-sale/7934665196.html",
-      "title": "washer and dryer for sale",
-      "asking_price": 300,
-      "location": "mohegan lake",
-      "posted_at": "2026-05-16T06:02:57-0400",
-      "body": "Kenmore washer and whirlpool dryer good working condition.",
-      "search_key": "appliances",
-      "category": "ppa",
       "source": "craigslist"
     }
   ]
