@@ -1,9 +1,9 @@
 {
-  "fetched_at": "2026-05-16T19:59:23+00:00",
+  "fetched_at": "2026-05-16T20:17:31+00:00",
   "since_hours": 5,
-  "count": 7,
+  "count": 6,
   "by_source": {
-    "craigslist": 7,
+    "craigslist": 6,
     "auctionninja": 0
   },
   "an_watch_list": [],
@@ -32,19 +32,6 @@
       "thumbnail_url": "https://images.craigslist.org/00y0y_jSidTGWL5vp_0t20CI_600x450.jpg",
       "search_key": "electronics",
       "category": "ela",
-      "source": "craigslist"
-    },
-    {
-      "post_id": "7934726751",
-      "url": "https://newyork.craigslist.org/wch/msg/d/cortlandt-manor-ludwig-drum-set-for-sale/7934726751.html",
-      "title": "Ludwig Drum Set For Sale",
-      "asking_price": 95,
-      "location": "westchester",
-      "posted_at": "2026-05-16T12:22:51-0400",
-      "body": "Ludwig drum set for sale. It sounds really really good for the price good for beginner or even a pro. It sounds that good . It’s a five piece kit it includes  high hat, cymbals z  “ 13   Z brand and a crash ride / cymbal “18 22 inch bass drum 12 inch Tom 13 inch Tom 16 x 16 floor tom and a 5 x 14 snare drum with a high hat stand and one cymbal  stand snare stand and bass drum pedal . Excellent price. Delivery option available. $95",
-      "thumbnail_url": "https://images.craigslist.org/00N0N_7adUX4c5AaT_0uO0t2_600x450.jpg",
-      "search_key": "instruments",
-      "category": "msa",
       "source": "craigslist"
     },
     {
