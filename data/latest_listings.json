@@ -1,51 +1,11 @@
 {
-  "fetched_at": "2026-05-22T11:59:23+00:00",
+  "fetched_at": "2026-05-24T19:26:40+00:00",
   "since_hours": 5,
-  "count": 3,
+  "count": 0,
   "by_source": {
-    "craigslist": 3,
+    "craigslist": 0,
     "auctionninja": 0
   },
   "an_watch_list": [],
-  "listings": [
-    {
-      "post_id": "7935978355",
-      "url": "https://newyork.craigslist.org/wch/ele/d/glen-cove-dj-equipment-vintage-gemini/7935978355.html",
-      "title": "DJ EQUIPMENT VINTAGE GEMINI MIXER",
-      "asking_price": 100,
-      "location": "Yonkers",
-      "posted_at": "2026-05-22T07:14:19-0400",
-      "body": "VINTAGE GEMINI DJ MIXER ONLY $100 HIP HOP MUSEUM QUALITY BOOM BOXES $350 MOTOROLA BEEPERS $100 CALL show contact info",
-      "thumbnail_url": "https://images.craigslist.org/00606_6c0Qa86K0Fb_0t20CI_600x450.jpg",
-      "search_key": "electronics",
-      "category": "ela",
-      "source": "craigslist"
-    },
-    {
-      "post_id": "7935967115",
-      "url": "https://newyork.craigslist.org/wch/ele/d/pound-ridge-panasonic-audio-timer-te-97/7935967115.html",
-      "title": "Panasonic Audio Timer TE 97",
-      "asking_price": 25,
-      "location": "westchester",
-      "posted_at": "2026-05-22T02:55:55-0400",
-      "body": "Panasonic Audio Timer TE 97. 100% functional",
-      "thumbnail_url": "https://images.craigslist.org/00V0V_igG4oxgL91l_0CI0lM_600x450.jpg",
-      "search_key": "electronics",
-      "category": "ela",
-      "source": "craigslist"
-    },
-    {
-      "post_id": "7935978032",
-      "url": "https://newyork.craigslist.org/wch/clt/d/glen-cove-hip-hop-museum-1980s-boom-box/7935978032.html",
-      "title": "HIP HOP MUSEUM 1980'S BOOM BOX",
-      "asking_price": 350,
-      "location": "Yonkers",
-      "posted_at": "2026-05-22T07:09:51-0400",
-      "body": "LASONIC TRC-931 RARE 1980'S VINTAGE BOOM BOX ONLY $350 CALL show contact info",
-      "thumbnail_url": "https://images.craigslist.org/00R0R_lIY5A5eCJf7_0CI0t2_600x450.jpg",
-      "search_key": "collectibles",
-      "category": "cba",
-      "source": "craigslist"
-    }
-  ]
+  "listings": []
 }
