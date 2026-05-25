@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-25T19:11:59+00:00",
+  "fetched_at": "2026-05-25T19:59:26+00:00",
   "since_hours": 5,
   "count": 22,
   "by_source": {
@@ -161,19 +161,6 @@
       "source": "craigslist"
     },
     {
-      "post_id": "7936608988",
-      "url": "https://newyork.craigslist.org/wch/tls/d/white-plains-vintage-unbranded-hand/7936608988.html",
-      "title": "Vintage Unbranded Hand Vise for Gunsmith, Jeweler, Machinist, etc.",
-      "asking_price": 78,
-      "location": "White Plains",
-      "posted_at": "2026-05-25T10:53:35-0400",
-      "body": "Vintage Unbranded Hand Vise for Gunsmith, Jeweler, Machinist, Blacksmith, Watchmaker, etc. This hand vise is a compact tool designed to be held in the hand rather than mounted to a workbench. They are frequently used by gunsmiths, jewelers, machinists, and watchmakers for securing small workpieces. The vise features two 1 1/2\" wide jaws tightened by a screw mechanism.",
-      "thumbnail_url": "https://images.craigslist.org/01515_ewrwbrchFVv_0ew0pO_600x450.jpg",
-      "search_key": "tools",
-      "category": "tla",
-      "source": "craigslist"
-    },
-    {
       "post_id": "7936651283",
       "url": "https://newyork.craigslist.org/wch/app/d/katonah-never-used-cooking-fridge/7936651283.html",
       "title": "Never used cooking / fridge containers",
@@ -197,6 +184,19 @@
       "thumbnail_url": "https://images.craigslist.org/00W0W_4SO1slbxI3m_0CI0f8_600x450.jpg",
       "search_key": "appliances",
       "category": "ppa",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7936673913",
+      "url": "https://newyork.craigslist.org/wch/clt/d/port-orange-huge-lot-of-new-york/7936673913.html",
+      "title": "HUGE LOT of New York Collectibles",
+      "asking_price": 100,
+      "location": "Daytona Beach ~ Indigo Lakes",
+      "posted_at": "2026-05-25T15:09:45-0400",
+      "body": "These historical memorabilia collectibles are perfect for those interested in New York. Great for collectors to enjoy! * LOT of 4 Enamel New York Pins * 10 Central Park Conservancy Blank Note Cards with Envelopes Each Note Card Measures Approximately: 6.75” x 4.75” Condition: These note cards have never been used and are in pristine condition from a smoke-FREE home! What you will receive: (2) Springtime in the Park ~ Photo by: Elliot Stern (2) Cherry Hill Fountain ~ Photo by: Elliot Stern (2) Burnett Fountain ~ Photo by: Sara Cedar Miller (2) The Mall ~ Photo by: Zach Nelson (2) Bow Bridge ~ Photo by: Hideki Aono *The New York Landmarks Conservancy Post Cards *Lot of 15* Each Post Card Measures Approximately: 6” t x 4.5” W Condition: These postcards have never been used and are in pristine condition from a smoke-FREE home! The New York Landmarks Conservancy is a non-profit organization \"dedicated to preserving, revitalizing, and reusing New York’s architecturally significant buildings.\" It provides technical assistance, project management services, grants, and loans to owners of historic properties in New York State. What you will receive: (5) Chrysler Building, 1930 (5) Flatiron Building, 1902 (5) Brooklyn Bridge, 1883 *Collection of Small Posters of The Statue of Liberty & Ellis Island: A Timeline & Statue of Liberty Museum Pamphlet (See pictures for full descriptions) Shipping available at buyer's expense.",
+      "thumbnail_url": "https://images.craigslist.org/00D0D_ikiVcSgKhqO_0kO0ki_600x450.jpg",
+      "search_key": "collectibles",
+      "category": "cba",
       "source": "craigslist"
     },
     {
