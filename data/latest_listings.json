@@ -1,36 +1,24 @@
 {
-  "fetched_at": "2026-06-12T23:59:14+00:00",
+  "fetched_at": "2026-06-13T11:59:13+00:00",
   "since_hours": 5,
-  "count": 2,
+  "count": 1,
   "by_source": {
-    "craigslist": 2,
+    "craigslist": 1,
     "auctionninja": 0
   },
   "an_watch_list": [],
   "listings": [
     {
-      "post_id": "7940558421",
-      "url": "https://newyork.craigslist.org/wch/ele/d/new-rochelle-apple-vision-pro-rental/7940558421.html",
-      "title": "Apple Vision Pro Rental – 4 Hours $150 | Full Day $350 | NYC / Westchester",
-      "asking_price": 150,
-      "location": "New Rochelle",
-      "posted_at": "2026-06-12T15:59:03-0400",
-      "body": "Apple Vision Pro Rental – Experience the Future Today Want to try the Apple Vision Pro without spending thousands of dollars? Rent my Apple Vision Pro for work, entertainment, events, content creation, demos, or just to experience the latest technology. Rental Rates • 4 Hours – $150 • 8 Hours – $250 • Full Day (24 Hours) – $350 Security Deposit • $500 refundable deposit required before rental • Deposit returned upon safe return and inspection of the device Includes • Apple Vision Pro Headset • Battery Pack • Charging Cable • Setup Assistance (if needed) Perfect For • Watching movies on a giant virtual screen • Gaming • Productivity and remote work • Experiencing Apple’s latest technology • Content creators and demonstrations Requirements • Valid government-issued ID required • Simple rental agreement must be signed • Device must be returned in the same condition received Located in New Rochelle, NY. Available throughout Westchester, NYC, and surrounding areas. Contact me for availability and scheduling.",
-      "search_key": "electronics",
-      "category": "ela",
-      "source": "craigslist"
-    },
-    {
-      "post_id": "7940587273",
-      "url": "https://newyork.craigslist.org/wch/msg/d/white-plains-ludwig-classic-drum-kit/7940587273.html",
-      "title": "Ludwig classic drum kit",
-      "asking_price": 1400,
-      "location": "White Plains",
-      "posted_at": "2026-06-12T17:55:29-0400",
-      "body": "Drum kit from the 60s with hihat cymbals an 1 crash and sonic snare drum. Great old school sound with Roger’s hardware and cases.",
-      "thumbnail_url": "https://images.craigslist.org/01414_eQ1Rimc8gGy_0sS0CI_600x450.jpg",
-      "search_key": "instruments",
-      "category": "msa",
+      "post_id": "7940664699",
+      "url": "https://newyork.craigslist.org/wch/clt/d/yonkers-vintage-depression-green/7940664699.html",
+      "title": "Vintage Depression Green Uranium Glass Citrus Juicer Reamer",
+      "asking_price": 35,
+      "location": "westchester",
+      "posted_at": "2026-06-13T07:29:14-0400",
+      "body": "Vintage Depression Green Uranium Glass Citrus Juicer Reamer 8” long x 3.5” high x 6” wide. Has small chip (see photo)",
+      "thumbnail_url": "https://images.craigslist.org/01313_2kNjxEmgLwO_0t20CI_600x450.jpg",
+      "search_key": "collectibles",
+      "category": "cba",
       "source": "craigslist"
     }
   ]
