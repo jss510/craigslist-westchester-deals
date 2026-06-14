@@ -1,25 +1,11 @@
 {
-  "fetched_at": "2026-06-13T11:59:13+00:00",
+  "fetched_at": "2026-06-14T11:19:22+00:00",
   "since_hours": 5,
-  "count": 1,
+  "count": 0,
   "by_source": {
-    "craigslist": 1,
+    "craigslist": 0,
     "auctionninja": 0
   },
   "an_watch_list": [],
-  "listings": [
-    {
-      "post_id": "7940664699",
-      "url": "https://newyork.craigslist.org/wch/clt/d/yonkers-vintage-depression-green/7940664699.html",
-      "title": "Vintage Depression Green Uranium Glass Citrus Juicer Reamer",
-      "asking_price": 35,
-      "location": "westchester",
-      "posted_at": "2026-06-13T07:29:14-0400",
-      "body": "Vintage Depression Green Uranium Glass Citrus Juicer Reamer 8” long x 3.5” high x 6” wide. Has small chip (see photo)",
-      "thumbnail_url": "https://images.craigslist.org/01313_2kNjxEmgLwO_0t20CI_600x450.jpg",
-      "search_key": "collectibles",
-      "category": "cba",
-      "source": "craigslist"
-    }
-  ]
+  "listings": []
 }
