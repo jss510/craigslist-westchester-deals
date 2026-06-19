@@ -1,13 +1,39 @@
 {
-  "fetched_at": "2026-06-19T11:59:19+00:00",
+  "fetched_at": "2026-06-19T15:59:27+00:00",
   "since_hours": 5,
-  "count": 1,
+  "count": 7,
   "by_source": {
-    "craigslist": 1,
+    "craigslist": 7,
     "auctionninja": 0
   },
   "an_watch_list": [],
   "listings": [
+    {
+      "post_id": "7941969318",
+      "url": "https://newyork.craigslist.org/wch/ele/d/millwood-roku-streaming-stick/7941969318.html",
+      "title": "Roku Streaming Stick",
+      "asking_price": 20,
+      "location": "westchester",
+      "posted_at": "2026-06-19T11:10:44-0400",
+      "body": "Roku Streaming Stick in original box. Powerful & portable Easy setup: plug it in, connect to Internet, start streaming",
+      "thumbnail_url": "https://images.craigslist.org/00O0O_2lur0uxNUDj_0nH0t2_600x450.jpg",
+      "search_key": "electronics",
+      "category": "ela",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7941963978",
+      "url": "https://newyork.craigslist.org/wch/ele/d/white-plains-fitbit-luxe/7941963978.html",
+      "title": "Fitbit Luxe",
+      "asking_price": 70,
+      "location": "White Plains",
+      "posted_at": "2026-06-19T10:49:19-0400",
+      "body": "Fitbit Luxe. Barely used. I kept it in the closet for over a year, and I've used it for less than a week.",
+      "thumbnail_url": "https://images.craigslist.org/00o0o_4L8bxFue2JG_0CI0t2_600x450.jpg",
+      "search_key": "electronics",
+      "category": "ela",
+      "source": "craigslist"
+    },
     {
       "post_id": "7941931783",
       "url": "https://newyork.craigslist.org/wch/ele/d/bronxville-numark-mixtrack-pro-fx/7941931783.html",
@@ -19,6 +45,58 @@
       "thumbnail_url": "https://images.craigslist.org/00S0S_9fOoNWRlK1i_0CI0lM_600x450.jpg",
       "search_key": "electronics",
       "category": "ela",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7941966386",
+      "url": "https://newyork.craigslist.org/wch/msg/d/maryknoll-roland-fa-07/7941966386.html",
+      "title": "Roland FA 07",
+      "asking_price": 950,
+      "location": "westchester",
+      "posted_at": "2026-06-19T10:59:37-0400",
+      "body": "Roland FA 07 synth like new great sounds 2 keyboard stand and case hundred's of sounds $950 offers76 veolcity-sensitive keys Over 2000 sounds from the flagship INTEGRA-7 sound module, including SuperNATURAL synth and acoustic tones and drums; add even more tones via internal wave sound expansion slots SuperNATURAL synth engine is fully compatible with the expansive collection of free INTEGRA-7 synth tones available from Roland’s Axial sound library site 16-track sequencer with non-stop loop recording makes it easy to build songs quickly; export your sequencer tracks to an SDHC card as a complete stereo mix, or as multitrack audio or MIDI data for use in your DAW Onboard sampler based on the SP-404SX features 16 pads x 4 banks and direct recording/playback via SDHC cards Polish your sounds with a multitude of studio-quality effects, including 16 independent MFX engines, six COMP+EQ processors for drums, unique TFX (total effects), and global EQ, chorus, and reverb Tweak tones, effects, and external MIDI devices in real time with six user-assignable Sound Modify knobs Intuitive, streamlined interface with large color LCD",
+      "thumbnail_url": "https://images.craigslist.org/00T0T_98stG99nlQF_0t20CI_600x450.jpg",
+      "search_key": "instruments",
+      "category": "msa",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7941965549",
+      "url": "https://newyork.craigslist.org/wch/msg/d/maryknoll-ovation-cs247/7941965549.html",
+      "title": "Ovation cs247",
+      "asking_price": 250,
+      "location": "Osssining",
+      "posted_at": "2026-06-19T10:56:00-0400",
+      "body": "Ovation acoustic electric like  new  natural $250",
+      "thumbnail_url": "https://images.craigslist.org/00n0n_1wFXxPU7gFR_0t20CI_600x450.jpg",
+      "search_key": "instruments",
+      "category": "msa",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7941951219",
+      "url": "https://newyork.craigslist.org/wch/app/d/irvington-lg-lronc0605v-refrigerator/7941951219.html",
+      "title": "LG LRONC0605V Refrigerator",
+      "asking_price": 200,
+      "location": "Irvington",
+      "posted_at": "2026-06-19T09:48:53-0400",
+      "body": "New LG LRONC0605V refrigerator is in its original shipping box. This unit has a width of 20 5/8 inches, a depth of 21 7/8 inches, and a height of 44 5/8 inches. Pickup only in Irvington, NY Cash only.",
+      "thumbnail_url": "https://images.craigslist.org/00o0o_krze9TfnhHZ_0t20CI_600x450.jpg",
+      "search_key": "appliances",
+      "category": "ppa",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7941939709",
+      "url": "https://newyork.craigslist.org/wch/tag/d/thornwood-ryobi-power-washer-attachment/7941939709.html",
+      "title": "Ryobi power washer attachment for deck or patio",
+      "asking_price": 10,
+      "location": "Thornwood, NY",
+      "posted_at": "2026-06-19T08:37:52-0400",
+      "body": "Good condition",
+      "thumbnail_url": "https://images.craigslist.org/00f0f_l0pvYTrEc2Y_0CI0hp_600x450.jpg",
+      "search_key": "toys_games",
+      "category": "taa",
       "source": "craigslist"
     }
   ]
