@@ -1,13 +1,39 @@
 {
-  "fetched_at": "2026-06-21T11:59:07+00:00",
+  "fetched_at": "2026-06-21T15:59:00+00:00",
   "since_hours": 5,
-  "count": 1,
+  "count": 7,
   "by_source": {
-    "craigslist": 1,
+    "craigslist": 7,
     "auctionninja": 0
   },
   "an_watch_list": [],
   "listings": [
+    {
+      "post_id": "7942370455",
+      "url": "https://newyork.craigslist.org/wch/msg/d/yorktown-heights-keyboard-like-new/7942370455.html",
+      "title": "Keyboard like new",
+      "asking_price": 65,
+      "location": "Yorktown Heights",
+      "posted_at": "2026-06-21T10:26:22-0400",
+      "body": "Like new keyboard with power supply—-orig box and instructions sounds great",
+      "thumbnail_url": "https://images.craigslist.org/00z0z_cjUIxaAlXQ7_0CI0t2_600x450.jpg",
+      "search_key": "instruments",
+      "category": "msa",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7942370318",
+      "url": "https://newyork.craigslist.org/wch/msg/d/yorktown-heights-pearl-chrome-snare-mint/7942370318.html",
+      "title": "Pearl chrome snare mint",
+      "asking_price": 125,
+      "location": "Yorktown Heights",
+      "posted_at": "2026-06-21T10:25:18-0400",
+      "body": "Mint pearl snare with case looks and sounds great",
+      "thumbnail_url": "https://images.craigslist.org/00o0o_6sGXr3f13Um_0t20CI_600x450.jpg",
+      "search_key": "instruments",
+      "category": "msa",
+      "source": "craigslist"
+    },
     {
       "post_id": "7942349889",
       "url": "https://newyork.craigslist.org/wch/msg/d/new-rochelle-sunn-alnico-transducer-12s/7942349889.html",
@@ -18,6 +44,56 @@
       "body": "in five days these go back These are CTS (Chicago Telephone Supply) Sound is excellent. Bright and efficient. Probably each are 20 -25 watts but could be more. Great for low watt (60 watts or below) tube amps even though they came from the Sunn Dymos which was a solid state amp. call only",
       "search_key": "instruments",
       "category": "msa",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7942375692",
+      "url": "https://newyork.craigslist.org/wch/clt/d/yonkers-guinness-pint-pub-glasses/7942375692.html",
+      "title": "2 Guinness Pint Pub Glasses",
+      "asking_price": 10,
+      "location": "Yonkers",
+      "posted_at": "2026-06-21T11:02:16-0400",
+      "body": "2 Guinness Pint Pub Glasses The Guinness / Harp logos are molded into the glass - these are COOL $10 or B.O.",
+      "search_key": "collectibles",
+      "category": "cba",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7942375048",
+      "url": "https://newyork.craigslist.org/wch/clt/d/yonkers-empty-macallan-single-malt/7942375048.html",
+      "title": "Empty Macallan Single Malt Scotch Whiskey Bottles",
+      "asking_price": 5,
+      "location": "Yonkers (East)",
+      "posted_at": "2026-06-21T10:58:18-0400",
+      "body": "(2) Macallan - 12 yr Sherry Oak Cask in Box I sold some of these here on CL and see these selling on eBay for $10 each Thanks",
+      "search_key": "collectibles",
+      "category": "cba",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7942363723",
+      "url": "https://newyork.craigslist.org/wch/clt/d/purchase-japanese-patinated-bronze/7942363723.html",
+      "title": "Japanese Patinated Bronze Ryobu Torii Gate Bookends",
+      "asking_price": 100,
+      "location": "Purchase",
+      "posted_at": "2026-06-21T09:40:34-0400",
+      "body": "A pair of patinated bronze bookends modeled as Ryobu-style torii gates with curved top rails and secondary support pillars. Each gate features a central rectangular plaque inscribed with Japanese kanji characters referencing the Itsukushima Shrine. The metal displays a dark brown patina with golden tones visible on the undersides of the rectangular bases. Green felt protective pads are attached to the corners of each base. - h. 5 x w. 3 x l. 5 in. Included in an online estate sale ending on Monday, June 22 starting at 8:18PM. Local pickup in Purchase, NY on 6/25. View the details and everything in the sale here: https://auctions.aces.net/auction/DLW-98diMio0bCZPK9Jkhg/lot/hkLNxaWmqetxwyUQNYmx_A/JAPANESE-PATINATED-BRONZE-RYOBU-TORII-GATE-BOOKENDS",
+      "thumbnail_url": "https://images.craigslist.org/00909_1kaWt1lrBIb_0t20t2_600x450.jpg",
+      "search_key": "collectibles",
+      "category": "cba",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7942361475",
+      "url": "https://newyork.craigslist.org/wch/clt/d/purchase-2pc-art-nouveau-silver-plated/7942361475.html",
+      "title": "(2pc) Art Nouveau Silver Plated Mounted Glass Claret Jug and Match Pew",
+      "asking_price": 45,
+      "location": "Purchase",
+      "posted_at": "2026-06-21T09:23:32-0400",
+      "body": "The claret jug features a tapered glass body with diamond-cut patterns and silver-plated Art Nouveau mounts with whiplash motifs. The jug includes a hinged lid with a thumb-lift finial and a curved handle bearing electroplate hallmarks. The cruet consists of a glass bottle with a clear stopper set into a pewter holder with a shell-form handle. The pewter holder is marked on the underside with a Match brand label and a series of stamped touchmarks. - h. 12 x dia. 5.25 in. (Diameter at bottom of Large Pitcher) Included in an online estate sale ending on Monday, June 22 starting at 8:18PM. Local pickup in Purchase, NY on 6/25. View the details and everything in the sale here: https://auctions.aces.net/auction/DLW-98diMio0bCZPK9Jkhg/lot/yLYlpTx3uzA_LM-9j7sDnw/ART-NOUVEAU-SILVER-PLATED-MOUNTED-GLASS-CLARET-JUG-AND-MATCH-PEWTER-CRUET",
+      "thumbnail_url": "https://images.craigslist.org/00S0S_3vFAGm6lu27_0t20t2_600x450.jpg",
+      "search_key": "collectibles",
+      "category": "cba",
       "source": "craigslist"
     }
   ]
