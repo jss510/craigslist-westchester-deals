@@ -1,9 +1,9 @@
 {
-  "fetched_at": "2026-06-27T13:29:15+00:00",
+  "fetched_at": "2026-06-27T15:59:17+00:00",
   "since_hours": 5,
-  "count": 13,
+  "count": 19,
   "by_source": {
-    "craigslist": 13,
+    "craigslist": 19,
     "auctionninja": 0
   },
   "an_watch_list": [],
@@ -22,6 +22,19 @@
       "source": "craigslist"
     },
     {
+      "post_id": "7943642514",
+      "url": "https://newyork.craigslist.org/wch/msg/d/scarsdale-guitar-carved-archtop/7943642514.html",
+      "title": "Guitar, carved archtop",
+      "asking_price": 1000,
+      "location": "Scarsdale",
+      "posted_at": "2026-06-27T09:39:53-0400",
+      "body": "Fully carved Loar  LH650 16\" lower bout archtop in very good condition. 2 blemishes, a small rub in the nitro finish and a small scratch, both shown in photos. A couple of tiny dings. Otherwise no issues. Frets have no discernable wear.  Includes hard shell case",
+      "thumbnail_url": "https://images.craigslist.org/00B0B_cGFmDvmOKHq_0t20CI_600x450.jpg",
+      "search_key": "instruments",
+      "category": "msa",
+      "source": "craigslist"
+    },
+    {
       "post_id": "7943636732",
       "url": "https://newyork.craigslist.org/wch/msg/d/tarrytown-markbass-compressore/7943636732.html",
       "title": "MarkBass Compressore",
@@ -35,6 +48,19 @@
       "source": "craigslist"
     },
     {
+      "post_id": "7943668778",
+      "url": "https://newyork.craigslist.org/wch/tls/d/peekskill-metabo-burnishing-kit-made-in/7943668778.html",
+      "title": "Metabo Burnishing Kit (Made in Germany) - New in Box",
+      "asking_price": 800,
+      "location": "Peekskill/NYC",
+      "posted_at": "2026-06-27T11:40:29-0400",
+      "body": "Thought I would use this burnisher to polish my stainless steel tables but am too lazy.  Comes with all original accessories and 3 pack  non-woven fleece belt meant to polish table legs.  There is a dent on the side of the metal box.  No low ballers, please.  I'm in no rush to sell. https://www.amazon.com/Metabo-602259620-SE17-200-Burnishing-Machine/dp/B07C3TQ9JV https://www.amazon.com/gp/product/B000VE6DCE/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1 Please note that I live in northern Westchester and only free to meet up in NYC on Sunday (sometimes Saturday) morning and meet curbside in Manhattan's Inwood, Eastside/Downtown Brooklyn, Navy Yard, Ft. Greene, Clinton Hill, North Williamsburg, Greenpoint, LIC/Queens or along the Sprain/Taconic. Other locations on a case-by-case basis, and with a small fee to cover time and gas.  I would need to know by Friday afternoon.  This is a bit bulky and heavy (~ 45 lbs) so having a car is advised if you're not by one of the meetup locations.  Preference for meeting up in Inwood or Chinatown when in NYC. When replying, let me where and when you would like to meet meet along with your phone number. Cash and carry.  All sales final. Ad will be deleted once sold. Polisher/Burnisher",
+      "thumbnail_url": "https://images.craigslist.org/00Y0Y_kRMsRaC1s9hz_0CI0pO_600x450.jpg",
+      "search_key": "tools",
+      "category": "tla",
+      "source": "craigslist"
+    },
+    {
       "post_id": "7943625538",
       "url": "https://newyork.craigslist.org/wch/tls/d/hartsdale-on-site-metal-tool-storage/7943625538.html",
       "title": "On site metal tool storage unit",
@@ -44,6 +70,74 @@
       "body": "On site metal tool storage unit.",
       "search_key": "tools",
       "category": "tla",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7943652215",
+      "url": "https://newyork.craigslist.org/wch/app/d/pelham-59-acrylic-claw-foot-tub/7943652215.html",
+      "title": "59\" acrylic claw foot tub",
+      "asking_price": 500,
+      "location": "Pelham",
+      "posted_at": "2026-06-27T10:28:48-0400",
+      "body": "Like-new acrylic claw foot tub, purchased from Wayfair one year ago and barely used (fewer than 10 times). In perfect condition, we just bought a bigger one. Pick up or can delivery locally. Paid $1100 for it. Will take best offer. https://www.wayfair.com/home-improvement/pdp/woodbridge-59-x-28-clawfoot-soaking-acrylic-bathtub-wdbr1560.html?piid=51226569%2C61051262",
+      "thumbnail_url": "https://images.craigslist.org/00A0A_agGCBmeJcQ8_0CI0t2_600x450.jpg",
+      "attrs": {
+        "sku": "WDBR1560"
+      },
+      "search_key": "appliances",
+      "category": "ppa",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7943643225",
+      "url": "https://newyork.craigslist.org/wch/clt/d/north-salem-hummels-collection/7943643225.html",
+      "title": "Hummels collection !!!",
+      "asking_price": 300,
+      "location": "North Salem",
+      "posted_at": "2026-06-27T09:44:03-0400",
+      "body": "16 Hummels - many from the 1930s. Excellent condition. Buy whole collection or individually. Chick girl, barnyard hero, chimney sweep, little scholar, on vacation, birdwatcher, baking day, stormy weather, goose girl, playmates, sweet music, joyful ashtray and  more.",
+      "thumbnail_url": "https://images.craigslist.org/00i0i_j3Av8A4aOAd_0CI0hT_600x450.jpg",
+      "search_key": "collectibles",
+      "category": "cba",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7943640689",
+      "url": "https://newyork.craigslist.org/wch/clt/d/north-salem-hummel-stormy-weather/7943640689.html",
+      "title": "Hummel - Stormy Weather 1950-1955",
+      "asking_price": 90,
+      "location": "North Salem",
+      "posted_at": "2026-06-27T09:28:39-0400",
+      "body": "Hummel - Stormy Weather 1950-1955 #71 Vintage, rare",
+      "thumbnail_url": "https://images.craigslist.org/00Q0Q_eOxyaw3mgPM_0CI0t2_600x450.jpg",
+      "search_key": "collectibles",
+      "category": "cba",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7943639936",
+      "url": "https://newyork.craigslist.org/wch/clt/d/north-salem-hummel-baking-day-1950s/7943639936.html",
+      "title": "Hummel - Baking Day 1950s",
+      "asking_price": 65,
+      "location": "North Salem",
+      "posted_at": "2026-06-27T09:23:25-0400",
+      "body": "Hummel - Baking Day - 330  1950s",
+      "thumbnail_url": "https://images.craigslist.org/00g0g_4X5vdCTrSmS_0CI0t2_600x450.jpg",
+      "search_key": "collectibles",
+      "category": "cba",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7943639698",
+      "url": "https://newyork.craigslist.org/wch/clt/d/north-salem-hummel-birdwatcher/7943639698.html",
+      "title": "Hummel - Birdwatcher",
+      "asking_price": 40,
+      "location": "North Salem",
+      "posted_at": "2026-06-27T09:21:49-0400",
+      "body": "Hummel - Birdwatcher - 75/300 Excellent condition",
+      "thumbnail_url": "https://images.craigslist.org/00L0L_7v5NWG32Y3b_0CI0t2_600x450.jpg",
+      "search_key": "collectibles",
+      "category": "cba",
       "source": "craigslist"
     },
     {
@@ -146,19 +240,6 @@
       "posted_at": "2026-06-27T08:53:03-0400",
       "body": "Hummel - Joyful Ashtray - #33; date: 1950-1955",
       "thumbnail_url": "https://images.craigslist.org/00T0T_3I8au5WrgKu_0CI0t2_600x450.jpg",
-      "search_key": "collectibles",
-      "category": "cba",
-      "source": "craigslist"
-    },
-    {
-      "post_id": "7943634541",
-      "url": "https://newyork.craigslist.org/wch/clt/d/north-salem-hummel-chimney-sweep/7943634541.html",
-      "title": "Hummel - Chimney Sweep",
-      "asking_price": 35,
-      "location": "North Salem",
-      "posted_at": "2026-06-27T08:48:44-0400",
-      "body": "Hummel - Chimney Sweep 1950-1955 - Excellent condition",
-      "thumbnail_url": "https://images.craigslist.org/00S0S_aWNmaWvJxUD_0CI0t2_600x450.jpg",
       "search_key": "collectibles",
       "category": "cba",
       "source": "craigslist"
