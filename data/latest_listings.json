@@ -1,13 +1,64 @@
 {
-  "fetched_at": "2026-06-28T11:59:11+00:00",
+  "fetched_at": "2026-06-28T15:59:18+00:00",
   "since_hours": 5,
-  "count": 1,
+  "count": 5,
   "by_source": {
-    "craigslist": 1,
+    "craigslist": 5,
     "auctionninja": 0
   },
   "an_watch_list": [],
   "listings": [
+    {
+      "post_id": "7943840927",
+      "url": "https://newyork.craigslist.org/wch/app/d/mount-vernon-air-fryer-toaster-oven/7943840927.html",
+      "title": "Air Fryer Toaster Oven",
+      "asking_price": 50,
+      "location": "Mount Vernon",
+      "posted_at": "2026-06-28T09:41:08-0400",
+      "body": "Item is used but in perfect working order, no issues. It warms, broils, roasts, bakes and air fries. There is an oven light and hears up to 450°. 15 1/2 inches wide 12 1/4 inches high and 12 inches in length. Only selling because I'm moving. Pick up please",
+      "thumbnail_url": "https://images.craigslist.org/00s0s_gusQkn0Oywb_0t20CI_600x450.jpg",
+      "search_key": "appliances",
+      "category": "ppa",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7943840691",
+      "url": "https://newyork.craigslist.org/wch/app/d/mount-vernon-bella-blue-12-inch/7943840691.html",
+      "title": "Bella Blue 12 inch Electric Skillet",
+      "asking_price": 25,
+      "location": "Mount Vernon",
+      "posted_at": "2026-06-28T09:39:04-0400",
+      "body": "Used a few times still looks almost new. A few MINIMAL hairline scratches on the non stick surface. Does not affect performance.When I say non stick, I'm not joking. Selling because I'm moving, hate to let it go. The skillet does not separate from the handles. It's one piece with the lid and electric adapter. 12 inch by 12 inch cooking surface Pickup please",
+      "thumbnail_url": "https://images.craigslist.org/00r0r_51DQZpJGDAn_0t20CI_600x450.jpg",
+      "search_key": "appliances",
+      "category": "ppa",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7943838123",
+      "url": "https://newyork.craigslist.org/wch/app/d/hastings-on-hudson-window-air/7943838123.html",
+      "title": "Window Air Conditioner 6000 BTU like new",
+      "asking_price": 195,
+      "location": "Hastings on Hudson",
+      "posted_at": "2026-06-28T09:18:12-0400",
+      "body": "Vissani 6000 BTU window air conditioner. Like new: Used for one season last summer while our central À/c was down. Cools room up to 250 sq.ft.  Fits windows 21.8 - 36 inches wide. Comes with all parts including remote control. Home Depot sells these units for $235. You can have it for $195.",
+      "search_key": "appliances",
+      "category": "ppa",
+      "source": "craigslist"
+    },
+    {
+      "post_id": "7943851032",
+      "url": "https://newyork.craigslist.org/wch/tag/d/thornwood-sesame-place-tickets-fast/7943851032.html",
+      "title": "6 Sesame Place Tickets & 2 fast pass tickets",
+      "asking_price": 225,
+      "location": "Westchester",
+      "posted_at": "2026-06-28T10:50:16-0400",
+      "body": "Selling 6 tickets two fast passes to cut lines up to 4 people each ticket willing to break up or take all 225 call or text me at show contact info it’s in system to expire 2027 so disregard the date juat all they had left ticket wise to give me but good until 2027",
+      "thumbnail_url": "https://images.craigslist.org/00W0W_1qYR1bSHxWY_0CI0t2_600x450.jpg",
+      "search_key": "toys_games",
+      "category": "taa",
+      "source": "craigslist"
+    },
     {
       "post_id": "7943827078",
       "url": "https://newyork.craigslist.org/wch/tag/d/harrison-step-ride-on-blue-car-cruiser/7943827078.html",
