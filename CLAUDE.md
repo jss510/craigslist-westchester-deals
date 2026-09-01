@@ -56,10 +56,25 @@ participate in the cloud-routine contract.
   there.
 - Use the standard `inputs\`, `outputs\`, `notes\` subfolders for new
   workspace material that isn't part of the cloud-routine contract.
+- **The digest HTML template in `prompts\routine.md` Step 5 is a contract, not a
+  suggestion.** Past routine fires improvised their own markup and shipped
+  unreadable emails (blue titles, UTC times). The four "non-negotiable output
+  rules" at the top of `routine.md` exist because of that. If the digest looks
+  wrong again, check whether the routine followed the template before changing
+  the template.
+- **The digest is dark-themed** (`#0f1115` page, `#171a21` cards, `#ffffff`
+  titles). The user reads it on a black phone background. The title colour lives
+  on a `<span style="color:#ffffff !important">` *inside* the `<a>` because mail
+  clients rewrite the colour of a bare anchor to their own link blue.
+  Reference render: `notes\digest-preview-dark.html`.
+- **All user-facing times are America/New_York**, labelled EDT or EST. The
+  source JSON (`ends_at`, `fetched_at`) is UTC; convert before it reaches the
+  email. Only the Step 7 stdout summary line is exempt.
 
 ## Scope and filters (from the active routine)
 
-- Westchester-only. Explicitly drops Bronx, Stamford CT, NJ.
+- Craigslist: Westchester-only. Explicitly drops Bronx, Stamford CT, NJ.
+- AuctionNinja: Westchester luxury towns + Greenwich CT (see AN scope below).
 - Categories in scope: electronics, musical instruments, portable power tools
   (no cabinet saws), Lego, premium kitchen gear (Rancilio, Breville, Gaggia,
   Vitamix, KitchenAid, Le Creuset, Wüsthof).
@@ -69,8 +84,16 @@ participate in the cloud-routine contract.
   `max_recommended_bid >= 5` where
   `max_recommended_bid = floor((fair_value_low - 200) / 1.20)`
   (the 1.20 accounts for AN's 20% buyer's premium).
-- AN scope: lots from sales within ~5 miles of zip 10803, closing within 36
-  hours. URL uses `?zip=10803` (proximity-sorted), not `?state=NY`.
+- AN scope (expanded 2026-06-10, was ~5 mi of 10803): lots from sales in
+  luxury/affluent towns within ~30 min drive of Pelham (10803), closing within
+  36 hours. Whitelist lives in `AN_LOCAL_CITIES` in `config.py` — Sound Shore
+  (Larchmont through Rye Brook), Scarsdale/Bronxville corridor, White
+  Plains/Hartsdale/Purchase, the rivertowns (Hastings through Tarrytown),
+  Chappaqua/Briarcliff, and Greenwich CT (incl. Cos Cob, Riverside, Old
+  Greenwich). Deliberately excluded: all Bronx neighborhoods and Mount Vernon
+  (low value), Long Island (bad drive), Stamford/Darien CT (over 30 min /
+  mixed), Armonk, Port Chester. `AN_ALLOWED_STATES` is now `["NY", "CT"]`.
+  URL still uses `?zip=10803` (proximity-sorted), not `?state=NY`.
 - Items < $1 are auto-flagged as scam/bait.
 
 ## Known issues / past incidents
