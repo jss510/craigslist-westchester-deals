@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-24T11:55:06+00:00",
+  "fetched_at": "2026-09-24T15:55:07+00:00",
   "since_hours": 5,
   "count": 100,
   "by_source": {
@@ -2080,14 +2080,14 @@
       "post_id": "an_200259",
       "url": "https://www.auctionninja.com/foundhastings/product/original-artwork-marie-foppiani-schlecht-200259.html",
       "title": "Original Artwork : Marie Foppiani Schlecht",
-      "asking_price": 30,
+      "asking_price": 32,
       "location": "White Plains, NY",
       "posted_at": "2026-09-24T23:30:00+00:00",
       "body": "",
       "thumbnail_url": "https://www.pictureserver1.auctionninja.com/pictureserver/foundhastings/Pictures/IMG_2795_5393_1260_1788049473863.jpg",
       "attrs": {
         "lot_number": "95",
-        "current_bid": 25.0,
+        "current_bid": 27.0,
         "buyers_premium_pct": 20,
         "ends_at": "2026-09-24T23:30:00+00:00",
         "auctioneer": "FoundHastings",
